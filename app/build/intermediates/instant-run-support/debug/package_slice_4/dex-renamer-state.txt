@@ -1,0 +1,4 @@
+#Wed Feb 28 22:53:49 ICT 2018
+base.0=/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex
