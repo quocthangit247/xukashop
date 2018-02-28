@@ -13,6 +13,6 @@ public class TrangChuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.trangchu_layout );
+        setContentView(R.layout.trangchu_layout);
     }
 }
