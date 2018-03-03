@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1519905267995"
+    timestamp="1520095204454"
     token="-542694835318719946"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -29,10 +29,31 @@
 
     <build
         build-mode="FULL"
-        timestamp="1519905098346"
+        timestamp="1520094412182"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -44,7 +65,19 @@
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1520095175303"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -53,7 +86,7 @@
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -61,16 +94,10 @@
         <artifact
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1519905267995"
+        timestamp="1520095204454"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/outputs/apk/debug/app-debug.apk"

@@ -16,7 +16,9 @@
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="?attr/actionBarSize"
-                android:layout_height="wrap_content">
+                android:layout_height="50dp"
+                app:logo="@drawable/logo"
+                >
 
             </android.support.v7.widget.Toolbar>
 
