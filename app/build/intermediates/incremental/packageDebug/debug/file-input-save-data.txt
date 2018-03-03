@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Mar 01 18:54:28 ICT 2018
+#Sun Mar 04 06:40:47 ICT 2018
 2.base=/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/transforms/dexMerger/debug/14
 5.set=DEX
 0.path=classes.dex

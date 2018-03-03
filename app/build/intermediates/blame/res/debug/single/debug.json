@@ -856,12 +856,12 @@
         "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_radio.xml.flat",
-        "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/layout/abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
         "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/logo.png"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_radio.xml.flat",
+        "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
