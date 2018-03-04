@@ -6,4 +6,5 @@
     <color name="bgToolbar">#183545</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorCart">#F67122</color>
+    <color name="colorGrey">#CCC</color>
 </resources>

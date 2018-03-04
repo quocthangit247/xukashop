@@ -192,6 +192,10 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_mevabe.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_mevabe.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
@@ -314,6 +318,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_ctkm.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_ctkm.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -596,6 +604,10 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_nhacua.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_nhacua.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -852,6 +864,10 @@
         "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/mix.jpg"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_thoitrang.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_thoitrang.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_design_navigation_menu.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/c2d2ebdd48e77a2e88deef5943c78b83/res/layout/design_navigation_menu.xml"
     },
@@ -1056,6 +1072,10 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/c2d2ebdd48e77a2e88deef5943c78b83/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_thuonghieu.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_thuonghieu.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_abc_btn_check_material.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable/abc_btn_check_material.xml"
     },
@@ -1122,6 +1142,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_lamdep.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_lamdep.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1234,6 +1258,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/anim_abc_fade_in.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_noibat.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_noibat.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -1588,12 +1616,20 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_dientu.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_dientu.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/color-v23_abc_tint_default.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/color-v23/abc_tint_default.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/67a597cf5c1e67ae34da68e485014b7f/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_thethao.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_thethao.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_abc_ic_clear_material.xml.flat",
