@@ -28,6 +28,10 @@
                 android:icon="@drawable/ic_notifications_none_black_24dp"
                 android:title="Thông báo"></item>
             <item
+                android:id="@+id/icDanhSachMongMuon"
+                android:icon="@drawable/ic_favorite_border_black_24dp"
+                android:title="Danh sách mong muốn"></item>
+            <item
                 android:id="@+id/icDonHangCuaToi"
                 android:icon="@drawable/ic_content_paste_black_24dp"
                 android:title="Đơn hàng của tôi"></item>
