@@ -4,14 +4,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentChuongTrinhKhuyenMai;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentDienTu;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentLamdep;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentMevaBe;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentNhaCua;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentNoiBat;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentTheThaoDulich;
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentThoiTrang;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentChuongTrinhKM;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentBestSeller;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentDuongDa;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentNuocHoa;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentPhuKien;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentTrangDiem;
+import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentTrending;
 import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentThuongHieu;
 
 import java.util.ArrayList;
@@ -30,24 +29,22 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
 
-        listFragment.add(new FragmentNoiBat());
-        listFragment.add(new FragmentChuongTrinhKhuyenMai());
-        listFragment.add(new FragmentDienTu());
-        listFragment.add(new FragmentLamdep());
-        listFragment.add(new FragmentMevaBe());
-        listFragment.add(new FragmentNhaCua());
-        listFragment.add(new FragmentTheThaoDulich());
-        listFragment.add(new FragmentThoiTrang());
+        listFragment.add(new FragmentChuongTrinhKM());
+        listFragment.add(new FragmentBestSeller());
+        listFragment.add(new FragmentTrending());
+        listFragment.add(new FragmentDuongDa());
+        listFragment.add(new FragmentTrangDiem());
+        listFragment.add(new FragmentNuocHoa());
+        listFragment.add(new FragmentPhuKien());
         listFragment.add(new FragmentThuongHieu());
 
-        titleFragment.add("Noi bat");
-        titleFragment.add("CTKM");
-        titleFragment.add("Dien tu");
-        titleFragment.add("Lam dep");
-        titleFragment.add("Me va be");
-        titleFragment.add("Nha cua");
-        titleFragment.add("The thao va du lich");
-        titleFragment.add("Thoi trang");
+        titleFragment.add("Chương trình khuyến mãi");
+        titleFragment.add("Sản phẩm mua nhiều");
+        titleFragment.add("Xu thế");
+        titleFragment.add("Dưỡng da");
+        titleFragment.add("Trang điểm");
+        titleFragment.add("Nước hoa");
+        titleFragment.add("Phụ kiện");
         titleFragment.add("Thuong hieu");
 
 

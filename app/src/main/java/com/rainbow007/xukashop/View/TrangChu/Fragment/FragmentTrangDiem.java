@@ -13,11 +13,11 @@ import com.rainbow007.xukashop.R;
  * Created by rainbow007 on 3/4/18.
  */
 
-public class FragmentThoiTrang extends Fragment {
+public class FragmentTrangDiem extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_thoitrang, container, false);
+        View view = inflater.inflate(R.layout.layout_trangdiem, container, false);
         return view;    }
 }

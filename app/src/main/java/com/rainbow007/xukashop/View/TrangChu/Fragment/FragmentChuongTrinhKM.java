@@ -13,12 +13,12 @@ import com.rainbow007.xukashop.R;
  * Created by rainbow007 on 3/4/18.
  */
 
-public class FragmentTheThaoDulich extends Fragment {
+public class FragmentChuongTrinhKM extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_thethao, container, false);
-        return view;    }
-
+        View view = inflater.inflate(R.layout.layout_chuongtrinhkm, container, false);
+        return view;
+    }
 }

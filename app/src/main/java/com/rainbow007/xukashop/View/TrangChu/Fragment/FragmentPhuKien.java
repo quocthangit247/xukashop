@@ -13,12 +13,11 @@ import com.rainbow007.xukashop.R;
  * Created by rainbow007 on 3/4/18.
  */
 
-public class FragmentMevaBe extends Fragment {
+public class FragmentPhuKien extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_mevabe, container, false);
-        return view;
-    }
+        View view = inflater.inflate(R.layout.layout_phukien, container, false);
+        return view;    }
 }
