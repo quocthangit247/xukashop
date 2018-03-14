@@ -8,9 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/colorWhite</item>
     </style>
+
     <style name="capfalse" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
     </style>
+
     <style name="menuItem" parent="AppTheme">
         <item name="android:textColorPrimary">@color/bgToolbar</item>
     </style>

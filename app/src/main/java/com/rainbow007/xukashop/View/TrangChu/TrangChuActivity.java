@@ -3,6 +3,9 @@ package com.rainbow007.xukashop.View.TrangChu;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -20,6 +23,8 @@ public class TrangChuActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +34,19 @@ public class TrangChuActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolBar);
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpaper);
+        drawerLayout = findViewById(R.id.drawserLayout);
+
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
+        drawerLayout.addDrawerListener(drawerToggle);
+
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        drawerToggle.syncState();
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-        setSupportActionBar(toolbar);
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -44,7 +58,8 @@ public class TrangChuActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        return super.onOptionsItemSelected(item);
+        if (drawerToggle.onOptionsItemSelected(item))
+            return true;
+        return true;
     }
 }

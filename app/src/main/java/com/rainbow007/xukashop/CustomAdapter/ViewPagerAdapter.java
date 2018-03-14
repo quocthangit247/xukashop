@@ -45,7 +45,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         titleFragment.add("Trang điểm");
         titleFragment.add("Nước hoa");
         titleFragment.add("Phụ kiện");
-        titleFragment.add("Thuong hieu");
+        titleFragment.add("Thương hiệu");
 
 
     }
