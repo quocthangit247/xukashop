@@ -36,11 +36,12 @@ public class TrangChuActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewpaper);
         drawerLayout = findViewById(R.id.drawserLayout);
 
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(drawerToggle);
 
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle.syncState();
