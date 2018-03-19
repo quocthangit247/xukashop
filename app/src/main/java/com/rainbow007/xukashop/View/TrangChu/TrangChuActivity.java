@@ -12,13 +12,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
+import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.R;
+
+import java.util.List;
 
 /**
  * Created by rainbow007 on 2/21/18.
  */
 
-public class TrangChuActivity extends AppCompatActivity {
+public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -62,5 +65,10 @@ public class TrangChuActivity extends AppCompatActivity {
         if (drawerToggle.onOptionsItemSelected(item))
             return true;
         return true;
+    }
+
+    @Override
+    public void HienThiDanhSachMenu(List<LoaiSanPham> loaiSanPhamList) {
+
     }
 }
