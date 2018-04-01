@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.1.0"
-    timestamp="1522573742806"
+    timestamp="1522574410021"
     token="2320201225978320308"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="232" />
+        duration="162" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="66" />
+        duration="30" />
     <task
         name="verifier"
-        duration="12" />
+        duration="4" />
 
     <artifact
         location="C:\Users\IT\Documents\AndroidProjects\xukashop\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -75,7 +75,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1522573742806"
+        timestamp="1522574410021"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\IT\Documents\AndroidProjects\xukashop\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
