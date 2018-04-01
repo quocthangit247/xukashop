@@ -25,7 +25,7 @@ public class PresenterLogicXuLyMenu implements IPresenterXuLyMenu {
 
         List<LoaiSanPham> loaiSanPhamList;
         String dataJson = "";
-        String duongdan = "http://192.168.1.165/xukaweb/loaisanpham.php?maloaicha=DU001";
+        String duongdan = "http://192.168.1.165/xukaweb/loaisanpham.php?maloaicha=FA001";
 
         DownloadJSON downloadJSON = new DownloadJSON(duongdan);
         downloadJSON.execute();
