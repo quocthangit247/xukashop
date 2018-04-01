@@ -2,6 +2,7 @@ package com.rainbow007.xukashop.ConnectInternet;
 
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -27,32 +28,39 @@ public class DownloadJSON extends AsyncTask<String, Void, String> {
     String duongdan;
     List<HashMap<String, String>> attrs;
     StringBuilder dulieu;
+    boolean method = true;
 
     public DownloadJSON(String URL) {
         this.duongdan = URL;
+        method = true;
     }
 
     public DownloadJSON(String URL, List<HashMap<String, String>> attrs) {
         this.duongdan = URL;
         this.attrs = attrs;
+        method = false;
     }
 
     @Override
     protected String doInBackground(String... strings) {
+
+        String data = "";
+
         try {
             URL url = new URL(duongdan);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
-            if (attrs.size() != 0) {
-                methodPost(httpURLConnection);
+            if (!method) {
+                data = methodPost(httpURLConnection);
             } else {
-                methodGet(httpURLConnection);
+                data = methodGet(httpURLConnection);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return dulieu.toString();
+        Log.d("dulieu",data);
+        return data;
     }
 
     private String methodGet(HttpURLConnection httpURLConnection) {

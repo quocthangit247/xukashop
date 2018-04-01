@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\IT\Documents\AndroidProjects\xukashop\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\IT\Documents\AndroidProjects\xukashop\app\src\debug\jniLibs"/></dataSet></merger>
