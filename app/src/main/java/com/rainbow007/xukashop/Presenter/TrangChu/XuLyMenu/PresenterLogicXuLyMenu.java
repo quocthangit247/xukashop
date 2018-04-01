@@ -5,6 +5,8 @@ import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Model.TrangChu.XuLyMenu.XulyJSONMenu;
 import com.rainbow007.xukashop.View.TrangChu.ViewXuLyMenu;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -25,9 +27,20 @@ public class PresenterLogicXuLyMenu implements IPresenterXuLyMenu {
 
         List<LoaiSanPham> loaiSanPhamList;
         String dataJson = "";
-        String duongdan = "http://192.168.1.165/xukaweb/loaisanpham.php?maloaicha=FA001";
+        List<HashMap<String,String>> attrs = new ArrayList<>();
+        //Download by get method
+        //String duongdan = "http://192.168.1.165/xukaweb/loaisanpham.php?maloaicha=FA001";
 
-        DownloadJSON downloadJSON = new DownloadJSON(duongdan);
+        //DownloadJSON downloadJSON = new DownloadJSON(duongdan);
+
+        //POST METHOD
+        String duongdan = "http://192.168.1.165/xukaweb/loaisanpham.php";
+        HashMap<String,String> hashMaLoaiCha = new HashMap<>();
+        hashMaLoaiCha.put("maloaicha","FA001");
+        attrs.add(hashMaLoaiCha);
+        DownloadJSON downloadJSON = new DownloadJSON(duongdan,attrs);
+
+
         downloadJSON.execute();
 
         try {
