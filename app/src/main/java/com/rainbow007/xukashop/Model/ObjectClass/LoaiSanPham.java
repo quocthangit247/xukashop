@@ -8,24 +8,24 @@ import java.util.List;
 
 public class LoaiSanPham {
 
-    private String MaLoaiSP;
-    private String MaLoaiCha;
+    private int MaLoaiSP;
+    private int MaLoaiCha;
     private String TenLoaiSP;
     private List<LoaiSanPham> listCon;
 
-    public String getMaLoaiSP() {
+    public int getMaLoaiSP() {
         return MaLoaiSP;
     }
 
-    public void setMaLoaiSP(String maLoaiSP) {
+    public void setMaLoaiSP(int maLoaiSP) {
         MaLoaiSP = maLoaiSP;
     }
 
-    public String getMaLoaiCha() {
+    public int getMaLoaiCha() {
         return MaLoaiCha;
     }
 
-    public void setMaLoaiCha(String maLoaiCha) {
+    public void setMaLoaiCha(int maLoaiCha) {
         MaLoaiCha = maLoaiCha;
     }
 

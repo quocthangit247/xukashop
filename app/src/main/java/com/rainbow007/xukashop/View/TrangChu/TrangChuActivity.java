@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ExpandableListView;
 
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
@@ -30,6 +31,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
+    private ExpandableListView expandableListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpaper);
         drawerLayout = findViewById(R.id.drawserLayout);
+        expandableListView = findViewById(R.id.epMenu);
 
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
