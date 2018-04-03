@@ -28,8 +28,8 @@ public class XulyJSONMenu {
             for (int i = 0; i < count; i++) {
                 JSONObject value = loaisp.getJSONObject(i);
                 LoaiSanPham dataSanpham = new LoaiSanPham();
-                dataSanpham.setMaLoaiSP(value.getString("MALOAISP"));
-                dataSanpham.setMaLoaiCha(value.getString("MALOAICHA"));
+                dataSanpham.setMaLoaiSP(Integer.parseInt(value.getString("MALOAISP")));
+                dataSanpham.setMaLoaiCha(Integer.parseInt(value.getString("MALOAICHA")));
                 dataSanpham.setTenLoaiSP(value.getString("TENLOAISP"));
 
                 loaiSanPhamList.add(dataSanpham);

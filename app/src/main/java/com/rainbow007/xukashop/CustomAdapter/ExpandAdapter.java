@@ -1,11 +1,14 @@
 package com.rainbow007.xukashop.CustomAdapter;
 
 import android.content.Context;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
+import com.rainbow007.xukashop.R;
 
 import java.util.List;
 
@@ -55,12 +58,15 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+    public View getGroupView(int vitriGroupCha, boolean isExpanded, View convertView, ViewGroup parent) {
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View viewGroupCha = layoutInflater.inflate(R.layout.custom_layout_group_cha,parent,false);
+
         return null;
     }
 
     @Override
-    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+    public View getChildView(int vitriGroupCha, int vitriGroupCon, boolean isLastChild, View convertView, ViewGroup parent) {
         return null;
     }
 

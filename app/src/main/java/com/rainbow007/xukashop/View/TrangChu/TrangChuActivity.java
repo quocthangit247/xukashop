@@ -77,6 +77,6 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
 
     @Override
     public void HienThiDanhSachMenu(List<LoaiSanPham> loaiSanPhamList) {
-        Log.i("kiemtra",loaiSanPhamList.get(0).getTenLoaiSP());
+        Log.i("kiemtra",String.valueOf(loaiSanPhamList.get(0).getMaLoaiSP()));
     }
 }
