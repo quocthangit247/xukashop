@@ -21,7 +21,7 @@ public class ManHinhChaoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(3000);
                 } catch (Exception e) {
 
                 } finally {

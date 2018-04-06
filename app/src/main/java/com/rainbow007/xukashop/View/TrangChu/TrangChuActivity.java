@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
+import com.rainbow007.xukashop.CustomAdapter.ExpandAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMenu;
@@ -77,6 +78,9 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
 
     @Override
     public void HienThiDanhSachMenu(List<LoaiSanPham> loaiSanPhamList) {
-        Log.i("kiemtra",String.valueOf(loaiSanPhamList.get(0).getMaLoaiSP()));
+        ExpandAdapter expandAdapter = new ExpandAdapter(this,loaiSanPhamList);
+        expandableListView.setAdapter(expandAdapter);
+        expandAdapter.notifyDataSetChanged();
+
     }
 }

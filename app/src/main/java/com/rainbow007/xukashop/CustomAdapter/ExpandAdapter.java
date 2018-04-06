@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.TextView;
 
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.R;
@@ -59,19 +60,62 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int vitriGroupCha, boolean isExpanded, View convertView, ViewGroup parent) {
-        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View viewGroupCha = layoutInflater.inflate(R.layout.custom_layout_group_cha,parent,false);
 
-        return null;
+        final ViewHolder viewHolder;
+        View viewGroupCha = null;
+        if (convertView == null) {
+            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            viewGroupCha = layoutInflater.inflate(R.layout.custom_layout_group_cha, parent, false);
+
+            // set up the ViewHolder
+            viewHolder = new ViewHolder();
+            viewHolder.text = (TextView) viewGroupCha.findViewById(R.id.txtLoaiSP);
+
+            // store the holder with the view
+            viewGroupCha.setTag(viewHolder);
+
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+
+        viewHolder.text.setText(loaiSanPhams.get(vitriGroupCha).getTenLoaiSP());
+
+        return viewGroupCha;
     }
 
     @Override
     public View getChildView(int vitriGroupCha, int vitriGroupCon, boolean isLastChild, View convertView, ViewGroup parent) {
-        return null;
+
+        final ViewHolder viewHolder;
+        View viewGroupCha = null;
+
+        if (convertView == null) {
+            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            viewGroupCha = layoutInflater.inflate(R.layout.custom_layout_group_cha, parent, false);
+
+            // set up the ViewHolder
+            viewHolder = new ViewHolder();
+            viewHolder.text = (TextView) viewGroupCha.findViewById(R.id.txtLoaiSP);
+
+            // store the holder with the view
+            convertView.setTag(viewHolder);
+
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+
+        viewHolder.text.setText(loaiSanPhams.get(vitriGroupCha).getTenLoaiSP());
+        return viewGroupCha;
+
     }
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return false;
+    }
+
+    static class ViewHolder {
+        TextView text;
+        TextView timestamp;
     }
 }
