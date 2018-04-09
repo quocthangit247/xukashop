@@ -7,12 +7,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapterDangNhap;
 import com.rainbow007.xukashop.R;
 
 public class DangNhapActivity extends AppCompatActivity {
-
     TabLayout tabLayout;
     Toolbar toolbar;
     ViewPager viewPager;
@@ -22,14 +20,15 @@ public class DangNhapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dangnhap);
 
-        tabLayout = findViewById(R.id.tabDangNhap);
-        viewPager = findViewById(R.id.viewPagerDangNhap);
-        toolbar = findViewById(R.id.toolBarDangNhap);
+        tabLayout = (TabLayout)findViewById(R.id.tabDangNhap);
+        viewPager = (ViewPager) findViewById(R.id.viewPagerDangNhap);
+        toolbar = (Toolbar) findViewById(R.id.toolBarDangNhap);
+
         setSupportActionBar(toolbar);
 
-        ViewPagerAdapterDangNhap viewPagerAdapterDangNhap = new ViewPagerAdapterDangNhap(getSupportFragmentManager());
-        viewPager.setAdapter(viewPagerAdapterDangNhap);
-        viewPagerAdapterDangNhap.notifyDataSetChanged();
+        ViewPagerAdapterDangNhap viewPagerAdaterDangNhap = new ViewPagerAdapterDangNhap(getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdaterDangNhap);
+        viewPagerAdaterDangNhap.notifyDataSetChanged();
 
         tabLayout.setupWithViewPager(viewPager);
     }

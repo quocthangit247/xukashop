@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     android:id="@+id/drawserLayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <FrameLayout
@@ -52,7 +51,7 @@
                             android:text="Viết sản phẩm bạn đang cần tìm ..."
                             android:textAlignment="textStart"
                             android:textAllCaps="false"
-                            android:textColor="@color/colorGrey" />
+                            android:textColor="@color/colorGray" />
 
                         <View
                             android:layout_width="1dp"
@@ -76,7 +75,7 @@
                         android:layout_height="wrap_content"
                         app:tabMode="scrollable"
                         app:tabTextAppearance="@style/capfalse"
-                        app:tabTextColor="@color/colorGrey">
+                        app:tabTextColor="@color/colorGray">
 
                     </android.support.design.widget.TabLayout>
                 </LinearLayout>
@@ -95,10 +94,10 @@
 
     <ExpandableListView
         android:id="@+id/epMenu"
-        android:layout_gravity="start"
-        android:background="@color/colorWhite"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorWhite">
 
     </ExpandableListView>
 </android.support.v4.widget.DrawerLayout>

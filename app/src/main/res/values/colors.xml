@@ -6,5 +6,8 @@
     <color name="bgToolbar">#183545</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorCart">#F67122</color>
-    <color name="colorGrey">#CCC</color>
+    <color name="colorGray">#CCC</color>
+    <color name="logo">#cc9900</color>
+    <color name="colorFB">#4a6ea9</color>
+    <color name="colorGG">#da4835</color>
 </resources>

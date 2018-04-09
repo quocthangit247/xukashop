@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
 MERGED from [com.android.support:design:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/c1937519010e4520e9c78987526807b9/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/5337cd3c0b547077f30acf7d7d6a69ea/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/0ab903596302367ccc28bf10f18e9c1c/AndroidManifest.xml:2:1-11:12
@@ -18,20 +18,20 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /Users/rainbow007/.g
 MERGED from [com.android.support:support-core-ui:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/545690ea7bff3e46fca1460fc1c143aa/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/4ea3274445d2c0478d4f5c40933c7eea/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/24ec2d60daa96d95f691a60e574f656d/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-36:12
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:11-69
@@ -52,7 +52,7 @@ ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/Android
 	android:name
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:8:22-73
 application
-ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:10:5-33:19
+ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:10:5-34:19
 MERGED from [com.android.support:design:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/c1937519010e4520e9c78987526807b9/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/c1937519010e4520e9c78987526807b9/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/5337cd3c0b547077f30acf7d7d6a69ea/AndroidManifest.xml:25:5-29:19
@@ -116,9 +116,11 @@ ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/Android
 	android:name
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:28:13-59
 activity#com.rainbow007.xukashop.View.DangNhap.DangNhapActivity
-ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:30:9-32:61
+ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:30:9-33:58
 	android:screenOrientation
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:32:13-49
+	android:label
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:33:13-46
 	android:name
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:31:13-59
 uses-sdk
