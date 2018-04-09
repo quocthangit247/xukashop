@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapterDangNhap;
@@ -13,6 +14,7 @@ import com.rainbow007.xukashop.R;
 public class DangNhapActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
+    Toolbar toolbar;
     ViewPager viewPager;
 
     @Override
@@ -22,6 +24,8 @@ public class DangNhapActivity extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tabDangNhap);
         viewPager = findViewById(R.id.viewPagerDangNhap);
+        toolbar = findViewById(R.id.toolBarDangNhap);
+        setSupportActionBar(toolbar);
 
         ViewPagerAdapterDangNhap viewPagerAdapterDangNhap = new ViewPagerAdapterDangNhap(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapterDangNhap);
