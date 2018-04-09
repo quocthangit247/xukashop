@@ -9,6 +9,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
+import com.rainbow007.xukashop.Model.TrangChu.XuLyMenu.XulyJSONMenu;
 import com.rainbow007.xukashop.R;
 
 import java.util.List;
@@ -21,6 +22,15 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
     public ExpandAdapter(Context context, List<LoaiSanPham> loaiSanPhams) {
         this.context = context;
         this.loaiSanPhams = loaiSanPhams;
+
+        XulyJSONMenu xulyJSONMenu = new XulyJSONMenu();
+
+        int count = loaiSanPhams.size();
+        for (int i=0;i<count;i++){
+            int maloaisp = loaiSanPhams.get(i).getMaLoaiSP();
+            loaiSanPhams.get(i).setListCon(xulyJSONMenu.LayLoaiSanPhamTheoMaLoai(maloaisp));
+        }
+
     }
 
     @Override
@@ -116,6 +126,8 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
 
     static class ViewHolder {
         TextView text;
-        TextView timestamp;
+
     }
+
+
 }

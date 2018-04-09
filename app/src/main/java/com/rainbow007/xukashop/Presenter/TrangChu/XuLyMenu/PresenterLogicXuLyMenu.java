@@ -29,16 +29,16 @@ public class PresenterLogicXuLyMenu implements IPresenterXuLyMenu {
         String dataJson = "";
         List<HashMap<String,String>> attrs = new ArrayList<>();
         //Download by get method
-        String duongdan = "http://xukashop.pe.hu/php/loaisanpham.php?maloaicha=001";
+//        String duongdan = "http://xukashop.pe.hu/php/loaisanpham.php?maloaicha=001";
+//
+//        DownloadJSON downloadJSON = new DownloadJSON(duongdan);
 
-        DownloadJSON downloadJSON = new DownloadJSON(duongdan);
-
-//        //POST METHOD
-//        String duongdan = "http://172.16.82.147/xukaweb/loaisanpham.php";
-//        HashMap<String,String> hashMaLoaiCha = new HashMap<>();
-//        hashMaLoaiCha.put("maloaicha","FA001");
-//        attrs.add(hashMaLoaiCha);
-//        DownloadJSON downloadJSON = new DownloadJSON(duongdan,attrs);
+        //POST METHOD
+        String duongdan = "http://xukashop.pe.hu/php/loaisanpham.php";
+        HashMap<String,String> hashMaLoaiCha = new HashMap<>();
+        hashMaLoaiCha.put("maloaicha","001");
+        attrs.add(hashMaLoaiCha);
+        DownloadJSON downloadJSON = new DownloadJSON(duongdan,attrs);
 
 
         downloadJSON.execute();
