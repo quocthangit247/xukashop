@@ -27,7 +27,9 @@
         <activity
             android:name=".View.TrangChu.TrangChuActivity"
             android:screenOrientation="portrait"></activity>
-
+        <activity
+            android:name=".View.DangNhap.DangNhapActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

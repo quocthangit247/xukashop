@@ -1,5 +1,6 @@
 package com.rainbow007.xukashop.View.TrangChu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -18,6 +19,7 @@ import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMenu;
 import com.rainbow007.xukashop.R;
+import com.rainbow007.xukashop.View.DangNhap.DangNhapActivity;
 
 import java.util.List;
 
@@ -71,14 +73,23 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if (drawerToggle.onOptionsItemSelected(item))
             return true;
+
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.icDangnhap:
+                Intent intent = new Intent(this, DangNhapActivity.class);
+                startActivity(intent);
+        }
+
         return true;
     }
 
     @Override
     public void HienThiDanhSachMenu(List<LoaiSanPham> loaiSanPhamList) {
-        ExpandAdapter expandAdapter = new ExpandAdapter(this,loaiSanPhamList);
+        ExpandAdapter expandAdapter = new ExpandAdapter(this, loaiSanPhamList);
         expandableListView.setAdapter(expandAdapter);
         expandAdapter.notifyDataSetChanged();
 
