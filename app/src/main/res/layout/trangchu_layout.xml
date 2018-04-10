@@ -13,12 +13,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/bgToolbar">
+                android:background="@color/bgToolbar"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"

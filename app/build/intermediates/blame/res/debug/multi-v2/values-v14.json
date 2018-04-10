@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
+            "outputFile": "C:\\Users\\IT\\Documents\\AndroidProjects\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/5337cd3c0b547077f30acf7d7d6a69ea/res/values-v14/values-v14.xml",
+                    "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\c9733fc927f42fe076b35ff70d57f8cf\\res\\values-v14\\values-v14.xml",
                     "from": {
                         "startLines": "2,7,8,9,15",
                         "startColumns": "4,4,4,4,4",

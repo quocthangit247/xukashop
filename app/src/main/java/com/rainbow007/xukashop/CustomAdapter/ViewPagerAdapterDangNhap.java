@@ -3,9 +3,12 @@ package com.rainbow007.xukashop.CustomAdapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 import com.rainbow007.xukashop.View.DangNhap.Fragment.FragmentDangKi;
 import com.rainbow007.xukashop.View.DangNhap.Fragment.FragmentDangNhap;
+import static android.content.ContentValues.TAG;
+
 
 public class ViewPagerAdapterDangNhap extends FragmentPagerAdapter {
 
@@ -18,6 +21,7 @@ public class ViewPagerAdapterDangNhap extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
+                Log.d(TAG, "getItem: ");
                 FragmentDangNhap fragmentDangNhap = new FragmentDangNhap();
                 return fragmentDangNhap;
             case 1:
