@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IT\\Documents\\AndroidProjects\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "C:\\Users\\IT\\Desktop\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\c9733fc927f42fe076b35ff70d57f8cf\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\de61b27dda1f475fccff9242c32d19ed\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -21,4 +21,9 @@
     <style name="ChangeColorDrawer" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@color/colorWhite</item>
     </style>
+
+    <declare-styleable name="PasswordEditText">
+        <attr name="useStrike" format="boolean"/>
+        <attr name="useValidate" format="boolean"/>
+    </declare-styleable>
 </resources>
