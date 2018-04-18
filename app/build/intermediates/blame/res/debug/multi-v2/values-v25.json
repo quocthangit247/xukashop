@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
             "map": [
                 {
                     "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/8e3fd1277cd796750c085bec9e857f81/res/values-v25/values-v25.xml",
+=======
+            "outputFile": "C:\\Users\\IT\\Desktop\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\de61b27dda1f475fccff9242c32d19ed\\res\\values-v25\\values-v25.xml",
+>>>>>>> busin
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",
