@@ -1,17 +1,20 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7ddfae54da5367409227f512143ef665/res/values-v24/values-v24.xml",
-=======
-            "outputFile": "C:\\Users\\IT\\Desktop\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
-            "map": [
+                    "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/2fc82be39426f285d56fbdb9bac3ca44/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
                 {
-                    "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\ff77b27c2f84b5db370a2426123725fe\\res\\values-v24\\values-v24.xml",
->>>>>>> busin
+                    "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/15bd0738edc2dd98ba4a61a1d5237a93/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -20,25 +23,11 @@
                         "endOffsets": "116,177,243,310"
                     },
                     "to": {
-                        "startLines": "8,9,10,11",
+                        "startLines": "4,5,6,7",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "619,685,746,812",
+                        "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
-                        "endOffsets": "680,741,807,874"
-                    }
-                },
-                {
-<<<<<<< HEAD
-                    "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/8e3fd1277cd796750c085bec9e857f81/res/values-v24/values-v24.xml",
-=======
-                    "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\de61b27dda1f475fccff9242c32d19ed\\res\\values-v24\\values-v24.xml",
->>>>>>> busin
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,212,347,416,480,549",
-                        "endColumns": "156,134,68,63,68,69",
-                        "endOffsets": "207,342,411,475,544,614"
+                        "endOffsets": "408,469,535,602"
                     }
                 }
             ]

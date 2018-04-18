@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Địa chỉ email"
+            android:id="@+id/edDiaChiEmailDangNhap"
             android:textColor="@color/colorBlack"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -25,6 +26,7 @@
 
         <com.rainbow007.xukashop.CustomView.PasswordEditText
             android:layout_width="match_parent"
+            android:id="@+id/edMatKhauDangNhap"
             android:layout_height="wrap_content"
             android:hint="Mật khẩu"
             android:textColor="@color/colorBlack"
@@ -32,6 +34,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <TextView
+        android:id="@+id/txtQuenMKDangNhap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -40,6 +43,7 @@
         android:textColor="@color/colorPrimary" />
 
     <Button
+        android:id="@+id/btnDangNhap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/logo"
@@ -58,6 +62,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnDangNhapFB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -68,6 +73,7 @@
             android:textColor="@color/colorFB" />
 
         <Button
+            android:id="@+id/btnDangNhapGG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

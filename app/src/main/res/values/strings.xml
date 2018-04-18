@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Xukashop</string>
     <string name="open">Mở</string>
-    <string name="close">Đóng</string>ß
+    <string name="close">Đóng</string>
+    <string name="facebook_app_id">1781878528733649</string>
+    <string name="fb_login_protocol_scheme">fb1781878528733649</string>
+
 </resources>
