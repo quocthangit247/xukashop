@@ -47,6 +47,11 @@
                 android:id="@+id/icTroGiup"
                 android:icon="@drawable/ic_help_outline_black_24dp"
                 android:title="Trợ giúp"></item>
+            <item
+                android:id="@+id/icDangXuat"
+                android:icon="@drawable/ic_logout"
+                android:title="Đăng Xuất"
+                android:visible="false"></item>
         </menu>
     </item>
 </menu>

@@ -14,12 +14,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
 import com.rainbow007.xukashop.CustomAdapter.ExpandAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMenu;
 import com.rainbow007.xukashop.R;
 import com.rainbow007.xukashop.View.DangNhap.DangNhapActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -35,6 +42,10 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private ExpandableListView expandableListView;
+    PresenterLogicXuLyMenu logicXuLyMenu;
+    String username = "";
+    AccessToken accessToken;
+    Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,13 +72,46 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        PresenterLogicXuLyMenu logicXuLyMenu = new PresenterLogicXuLyMenu(this);
+        logicXuLyMenu = new PresenterLogicXuLyMenu(this);
         logicXuLyMenu.LayDanhSachMenu();
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.menu_trangchu, menu);
+        this.menu = menu;
+
+        accessToken = logicXuLyMenu.LayTokenNguoiDungFB();
+        if (accessToken != null) {
+            GraphRequest graphRequest = GraphRequest.newMeRequest(accessToken, new GraphRequest.GraphJSONObjectCallback() {
+                @Override
+                public void onCompleted(JSONObject object, GraphResponse response) {
+                    try {
+                        username = object.getString("name");
+                        MenuItem menuItem = menu.findItem(R.id.icDangnhap);
+                        menuItem.setTitle(username);
+                        Log.d("token", username);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            Bundle parameters = new Bundle();
+            parameters.putString("fields", "name");
+
+            graphRequest.setParameters(parameters);
+            graphRequest.executeAsync();
+
+        }
+
+        if (accessToken != null) {
+
+            MenuItem itemDangXuat = menu.findItem(R.id.icDangXuat);
+            itemDangXuat.setVisible(true);
+        }
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -80,8 +124,17 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu 
         int id = item.getItemId();
         switch (id) {
             case R.id.icDangnhap:
-                Intent intent = new Intent(this, DangNhapActivity.class);
-                startActivity(intent);
+                if (accessToken == null) {
+                    Intent intent = new Intent(this, DangNhapActivity.class);
+                    startActivity(intent);
+                }
+                break;
+            case R.id.icDangXuat:
+                if (accessToken != null) {
+                    LoginManager.getInstance().logOut();
+                    this.menu.clear();
+                    this.onCreateOptionsMenu(menu);
+                }
         }
 
         return true;

@@ -1,7 +1,11 @@
 package com.rainbow007.xukashop.Model.TrangChu.XuLyMenu;
 
+import android.os.Bundle;
 import android.util.Log;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 
@@ -20,11 +24,13 @@ import java.util.concurrent.ExecutionException;
 
 public class XulyJSONMenu {
 
+    String username = "";
+
     public List<LoaiSanPham> ParserJSONMenu(String dulieujson) {
 
         List<LoaiSanPham> loaiSanPhamList = new ArrayList<>();
         try {
-            Log.d("XULY",dulieujson);
+            Log.d("XULY", dulieujson);
             JSONObject jsonObject = new JSONObject(dulieujson);
             JSONArray loaisp = jsonObject.getJSONArray("LOAISANPHAM");
             int count = loaisp.length();
@@ -46,17 +52,17 @@ public class XulyJSONMenu {
 
     }
 
-    public List<LoaiSanPham> LayLoaiSanPhamTheoMaLoai(int maloaisp){
+    public List<LoaiSanPham> LayLoaiSanPhamTheoMaLoai(int maloaisp) {
 
         List<LoaiSanPham> loaiSanPhamList = new ArrayList<>();
-        List<HashMap<String,String>> attrs = new ArrayList<>();
+        List<HashMap<String, String>> attrs = new ArrayList<>();
         String dataJson = "";
 
         String duongdan = "http://xukashop.pe.hu/php/loaisanpham.php";
-        HashMap<String,String> hashMaLoaiCha = new HashMap<>();
-        hashMaLoaiCha.put("maloaicha",String.valueOf(maloaisp));
+        HashMap<String, String> hashMaLoaiCha = new HashMap<>();
+        hashMaLoaiCha.put("maloaicha", String.valueOf(maloaisp));
         attrs.add(hashMaLoaiCha);
-        DownloadJSON downloadJSON = new DownloadJSON(duongdan,attrs);
+        DownloadJSON downloadJSON = new DownloadJSON(duongdan, attrs);
         downloadJSON.execute();
         try {
             dataJson = downloadJSON.get();
@@ -71,4 +77,5 @@ public class XulyJSONMenu {
 
         return loaiSanPhamList;
     }
+
 }

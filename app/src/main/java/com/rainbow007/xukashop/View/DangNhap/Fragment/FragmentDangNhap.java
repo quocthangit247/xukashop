@@ -21,6 +21,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.rainbow007.xukashop.R;
+import com.rainbow007.xukashop.View.TrangChu.TrangChuActivity;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -43,18 +44,17 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener {
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Log.d("kiemtra","thanh cong");
+                Intent intent = new Intent(getActivity(), TrangChuActivity.class);
+                startActivity(intent);
             }
 
             @Override
             public void onCancel() {
-                Log.d("kiemtra","thoat");
 
             }
 
             @Override
             public void onError(FacebookException error) {
-                Log.d("kiemtra","loi");
 
             }
         });
