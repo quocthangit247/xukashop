@@ -2,7 +2,6 @@ package com.rainbow007.xukashop.View.TrangChu;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -19,13 +18,8 @@ import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.rainbow007.xukashop.CustomAdapter.ExpandAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
-import com.rainbow007.xukashop.Model.DangNhap.ModelDangNhap;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMenu;
 import com.rainbow007.xukashop.R;
@@ -40,7 +34,7 @@ import java.util.List;
  * Created by rainbow007 on 2/21/18.
  */
 
-public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu, GoogleApiClient.OnConnectionFailedListener {
+public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -52,10 +46,6 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     String username = "";
     AccessToken accessToken;
     Menu menu;
-    ModelDangNhap modelDangNhap;
-    MenuItem itemDangNhap, itemDangXuat;
-    GoogleApiClient mGoogleApiClient;
-    GoogleSignInResult googleSignInResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,10 +73,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         tabLayout.setupWithViewPager(viewPager);
 
         logicXuLyMenu = new PresenterLogicXuLyMenu(this);
-        modelDangNhap = new ModelDangNhap();
-
         logicXuLyMenu.LayDanhSachMenu();
-        mGoogleApiClient = modelDangNhap.LayGoogleApiClient(this, this);
     }
 
     @Override
@@ -94,19 +81,15 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         getMenuInflater().inflate(R.menu.menu_trangchu, menu);
         this.menu = menu;
 
-        itemDangNhap = menu.findItem(R.id.icDangnhap);
-        itemDangXuat = menu.findItem(R.id.icDangXuat);
-
         accessToken = logicXuLyMenu.LayTokenNguoiDungFB();
-        googleSignInResult = modelDangNhap.LayThongTinDangNhapGG(mGoogleApiClient);
-
         if (accessToken != null) {
             GraphRequest graphRequest = GraphRequest.newMeRequest(accessToken, new GraphRequest.GraphJSONObjectCallback() {
                 @Override
                 public void onCompleted(JSONObject object, GraphResponse response) {
                     try {
                         username = object.getString("name");
-                        itemDangNhap.setTitle(username);
+                        MenuItem menuItem = menu.findItem(R.id.icDangnhap);
+                        menuItem.setTitle(username);
                         Log.d("token", username);
 
                     } catch (JSONException e) {
@@ -120,13 +103,12 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
 
             graphRequest.setParameters(parameters);
             graphRequest.executeAsync();
+
         }
 
-        if (googleSignInResult != null) {
-            itemDangNhap.setTitle(googleSignInResult.getSignInAccount().getDisplayName());
-        }
+        if (accessToken != null) {
 
-        if (accessToken != null || googleSignInResult != null) {
+            MenuItem itemDangXuat = menu.findItem(R.id.icDangXuat);
             itemDangXuat.setVisible(true);
         }
 
@@ -142,31 +124,17 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         int id = item.getItemId();
         switch (id) {
             case R.id.icDangnhap:
-                if (accessToken == null && googleSignInResult == null) {
+                if (accessToken == null) {
                     Intent intent = new Intent(this, DangNhapActivity.class);
                     startActivity(intent);
                 }
                 break;
             case R.id.icDangXuat:
-
-                //this is logout FB
                 if (accessToken != null) {
                     LoginManager.getInstance().logOut();
-
-                    //Log out thi refresh lai menu
                     this.menu.clear();
                     this.onCreateOptionsMenu(menu);
                 }
-
-                // this is logout GG
-                if (googleSignInResult != null) {
-                    Auth.GoogleSignInApi.signOut(mGoogleApiClient);
-                    //Log out thi refresh lai menu
-                    this.menu.clear();
-                    this.onCreateOptionsMenu(menu);
-                }
-
-
         }
 
         return true;
@@ -177,11 +145,6 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         ExpandAdapter expandAdapter = new ExpandAdapter(this, loaiSanPhamList);
         expandableListView.setAdapter(expandAdapter);
         expandAdapter.notifyDataSetChanged();
-
-    }
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
 }
