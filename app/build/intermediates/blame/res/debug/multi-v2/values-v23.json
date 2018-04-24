@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IT\\Documents\\AndroidProjects\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\IT\\Desktop\\xukashop-b75a0ab66ba17bd5bbe3bf964755f52dbe474805\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.0.2.aar\\fecfa96a8ddf4143d1e50c9bfced8f42\\res\\values-v23\\values-v23.xml",

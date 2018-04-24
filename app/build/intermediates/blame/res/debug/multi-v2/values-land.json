@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IT\\Documents\\AndroidProjects\\xukashop\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\IT\\Desktop\\xukashop-b75a0ab66ba17bd5bbe3bf964755f52dbe474805\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\IT\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\99cd0de0135649059a2c63a145a2c979\\res\\values-land\\values-land.xml",
