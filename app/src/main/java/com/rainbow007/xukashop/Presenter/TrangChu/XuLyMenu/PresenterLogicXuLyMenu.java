@@ -1,20 +1,12 @@
 package com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.util.Log;
-
 import com.facebook.AccessToken;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
 import com.rainbow007.xukashop.Model.DangNhap.ModelDangNhap;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Model.TrangChu.XuLyMenu.XulyJSONMenu;
+import com.rainbow007.xukashop.View.TrangChu.TrangChuActivity;
 import com.rainbow007.xukashop.View.TrangChu.ViewXuLyMenu;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,13 +38,18 @@ public class PresenterLogicXuLyMenu implements IPresenterXuLyMenu {
 //        DownloadJSON downloadJSON = new DownloadJSON(duongdan);
 
         //POST METHOD
-        String duongdan = "http://xukashop.pe.hu/php/loaisanpham.php";
+        String duongdan = TrangChuActivity.SERVER_NAME + "/php/loaisanpham.php";
+
+        HashMap<String, String> hsHam = new HashMap<>();
+        hsHam.put("ham", "LayDanhSachMenu");
+
         HashMap<String, String> hashMaLoaiCha = new HashMap<>();
         hashMaLoaiCha.put("maloaicha", "001");
+
         attrs.add(hashMaLoaiCha);
+        attrs.add(hsHam);
+
         DownloadJSON downloadJSON = new DownloadJSON(duongdan, attrs);
-
-
         downloadJSON.execute();
 
         try {

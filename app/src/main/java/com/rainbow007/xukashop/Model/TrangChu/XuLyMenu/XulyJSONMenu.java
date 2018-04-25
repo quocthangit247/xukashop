@@ -1,11 +1,7 @@
 package com.rainbow007.xukashop.Model.TrangChu.XuLyMenu;
 
-import android.os.Bundle;
 import android.util.Log;
 
-import com.facebook.AccessToken;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 
@@ -17,6 +13,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+
+import static com.rainbow007.xukashop.View.TrangChu.TrangChuActivity.SERVER_NAME;
 
 /**
  * Created by rainbow007 on 3/16/18.
@@ -58,10 +56,18 @@ public class XulyJSONMenu {
         List<HashMap<String, String>> attrs = new ArrayList<>();
         String dataJson = "";
 
-        String duongdan = "http://xukashop.pe.hu/php/loaisanpham.php";
+        String duongdan =  SERVER_NAME + "/php/loaisanpham.php";
+
+        HashMap<String, String> hsHam = new HashMap<>();
+        hsHam.put("ham", "LayDanhSachMenu");
+
         HashMap<String, String> hashMaLoaiCha = new HashMap<>();
         hashMaLoaiCha.put("maloaicha", String.valueOf(maloaisp));
+
+
         attrs.add(hashMaLoaiCha);
+        attrs.add(hsHam);
+
         DownloadJSON downloadJSON = new DownloadJSON(duongdan, attrs);
         downloadJSON.execute();
         try {

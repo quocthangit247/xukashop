@@ -46,6 +46,7 @@ import java.util.List;
 
 public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu, GoogleApiClient.OnConnectionFailedListener, AppBarLayout.OnOffsetChangedListener {
 
+    public static final String SERVER_NAME="http://xukashop.pe.hu";
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
