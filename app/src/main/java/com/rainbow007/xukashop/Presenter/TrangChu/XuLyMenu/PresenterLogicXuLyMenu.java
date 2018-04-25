@@ -2,7 +2,7 @@ package com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu;
 
 import com.facebook.AccessToken;
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
-import com.rainbow007.xukashop.Model.DangNhap.ModelDangNhap;
+import com.rainbow007.xukashop.Model.DangNhap_DangKy.ModelDangNhap;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Model.TrangChu.XuLyMenu.XulyJSONMenu;
 import com.rainbow007.xukashop.View.TrangChu.TrangChuActivity;
@@ -38,7 +38,7 @@ public class PresenterLogicXuLyMenu implements IPresenterXuLyMenu {
 //        DownloadJSON downloadJSON = new DownloadJSON(duongdan);
 
         //POST METHOD
-        String duongdan = TrangChuActivity.SERVER_NAME + "/php/loaisanpham.php";
+        String duongdan = TrangChuActivity.SERVER_NAME;
 
         HashMap<String, String> hsHam = new HashMap<>();
         hsHam.put("ham", "LayDanhSachMenu");

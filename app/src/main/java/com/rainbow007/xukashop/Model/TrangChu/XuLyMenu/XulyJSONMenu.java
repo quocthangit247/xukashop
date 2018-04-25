@@ -56,7 +56,7 @@ public class XulyJSONMenu {
         List<HashMap<String, String>> attrs = new ArrayList<>();
         String dataJson = "";
 
-        String duongdan =  SERVER_NAME + "/php/loaisanpham.php";
+        String duongdan =  SERVER_NAME ;
 
         HashMap<String, String> hsHam = new HashMap<>();
         hsHam.put("ham", "LayDanhSachMenu");

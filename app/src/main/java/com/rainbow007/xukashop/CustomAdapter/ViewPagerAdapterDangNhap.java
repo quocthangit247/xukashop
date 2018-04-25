@@ -5,8 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
-import com.rainbow007.xukashop.View.DangNhap.Fragment.FragmentDangKi;
-import com.rainbow007.xukashop.View.DangNhap.Fragment.FragmentDangNhap;
+import com.rainbow007.xukashop.View.DangNhap_DangKy.Fragment.FragmentDangKi;
+import com.rainbow007.xukashop.View.DangNhap_DangKy.Fragment.FragmentDangNhap;
 import static android.content.ContentValues.TAG;
 
 

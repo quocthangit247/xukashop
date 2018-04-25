@@ -87,6 +87,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.SwitchCompat
+            android:id="@+id/EmailDocQuyen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -96,6 +97,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btnDangKy"
             android:background="@color/logo"
             android:padding="10dp"
             android:text="Đăng ký" />
@@ -111,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="Hoặc đăng nhập bằng" />
+            android:text="Hoặc đăng ký bằng" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,7 +121,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnDangNhapFB"
+                android:id="@+id/btnDangNhapFBDK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -130,7 +132,7 @@
                 android:textColor="@color/colorFB" />
 
             <Button
-                android:id="@+id/btnDangNhapGG"
+                android:id="@+id/btnDangNhapGGDK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

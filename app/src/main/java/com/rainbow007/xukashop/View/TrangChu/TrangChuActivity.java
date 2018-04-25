@@ -9,7 +9,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -29,11 +28,11 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.rainbow007.xukashop.CustomAdapter.ExpandAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
-import com.rainbow007.xukashop.Model.DangNhap.ModelDangNhap;
+import com.rainbow007.xukashop.Model.DangNhap_DangKy.ModelDangNhap;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMenu;
 import com.rainbow007.xukashop.R;
-import com.rainbow007.xukashop.View.DangNhap.DangNhapActivity;
+import com.rainbow007.xukashop.View.DangNhap_DangKy.DangNhapActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,7 +45,7 @@ import java.util.List;
 
 public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu, GoogleApiClient.OnConnectionFailedListener, AppBarLayout.OnOffsetChangedListener {
 
-    public static final String SERVER_NAME="http://xukashop.pe.hu";
+    public static final String SERVER_NAME = "http://xukashop.pe.hu/php/loaisanpham.php";
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;

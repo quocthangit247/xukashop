@@ -1,4 +1,4 @@
-package com.rainbow007.xukashop.View.DangNhap;
+package com.rainbow007.xukashop.View.DangNhap_DangKy;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

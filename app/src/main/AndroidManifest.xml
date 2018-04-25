@@ -31,7 +31,7 @@
             android:name=".View.TrangChu.TrangChuActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".View.DangNhap.DangNhapActivity"
+            android:name=".View.DangNhap_DangKy.DangNhapActivity"
             android:label="Đăng nhập/Đăng ký"
             android:screenOrientation="portrait"></activity>
     </application>

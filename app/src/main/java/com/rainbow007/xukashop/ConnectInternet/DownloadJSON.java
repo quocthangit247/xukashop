@@ -59,7 +59,6 @@ public class DownloadJSON extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
 
-        Log.d("dulieu",data);
         return data;
     }
 
