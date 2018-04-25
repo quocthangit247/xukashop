@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,12 +15,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cần điền đầy đủ các mục"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            />
+            android:layout_marginTop="10dp"
+            android:text="Cần điền đầy đủ các mục"
+            android:textStyle="bold" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_edHoTenDK"
@@ -32,9 +29,10 @@
 
             <EditText
                 android:id="@+id/edHoTenDK"
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
-                android:hint="Họ tên đầy đủ"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Họ tên đầy đủ"
+                android:textColor="@color/colorBlack" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -45,9 +43,10 @@
 
             <EditText
                 android:id="@+id/edDiaChiEmailDK"
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
-                android:hint="Địa chỉ Email"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Địa chỉ Email"
+                android:textColor="@color/colorBlack" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -58,18 +57,19 @@
 
             <com.rainbow007.xukashop.CustomView.PasswordEditText
                 android:id="@+id/edMatKhauDK"
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Mật khẩu"
-                app:useStrike="true"/>
+                android:textColor="@color/colorBlack"
+                app:useStrike="true"
+                app:useValidate="true"/>
         </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mật khẩu phải bao gồm 6 ký tự và 1 chữ hoa"
             android:layout_margin="10dp"
-            />
+            android:text="Mật khẩu phải bao gồm 6 ký tự và 1 chữ hoa" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_edNhapLaiMatKhauDK"
@@ -79,34 +79,32 @@
 
             <com.rainbow007.xukashop.CustomView.PasswordEditText
                 android:id="@+id/edNhapLaiMatKhauDK"
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Nhập lại mật khẩu"
-                app:useStrike="true"/>
+                android:textColor="@color/colorBlack"
+                app:useStrike="true" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.SwitchCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tôi muốn nhận các khuyến mãi độc quyền qua email"
-            android:checked="true"
             android:layout_margin="10dp"
-            />
+            android:checked="true"
+            android:text="Tôi muốn nhận các khuyến mãi độc quyền qua email" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đăng ký"
-            android:padding="10dp"
             android:background="@color/logo"
-            />
+            android:padding="10dp"
+            android:text="Đăng ký" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chúng tôi đã hiểu rõ các điều khoản bảo mật của XukaShop"
             android:layout_margin="10dp"
-            />
+            android:text="Chúng tôi đã hiểu rõ các điều khoản bảo mật của XukaShop" />
 
         <TextView
             android:layout_width="match_parent"

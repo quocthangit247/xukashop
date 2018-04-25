@@ -9,10 +9,11 @@ import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.EditText;
+
 import com.rainbow007.xukashop.R;
 
-public class ClearEditText extends EditText{
-    Drawable crossx,nonecrossx,drawable;
+public class ClearEditText extends EditText {
+    Drawable crossx, nonecrossx, drawable;
     Boolean visible = false;
 
     public ClearEditText(Context context) {
@@ -36,23 +37,23 @@ public class ClearEditText extends EditText{
         khoitao();
     }
 
-    private void khoitao(){
+    private void khoitao() {
         crossx = ContextCompat.getDrawable(getContext(), R.drawable.ic_clear_black_24dp).mutate();
-        nonecrossx = ContextCompat.getDrawable(getContext(),android.R.drawable.screen_background_light_transparent).mutate();
+        nonecrossx = ContextCompat.getDrawable(getContext(), android.R.drawable.screen_background_light_transparent).mutate();
 
         cauhinh();
     }
 
-    private void cauhinh(){
+    private void cauhinh() {
         setInputType(InputType.TYPE_CLASS_TEXT);
         Drawable[] drawables = getCompoundDrawables();
-        drawable = visible? crossx:nonecrossx;
-        setCompoundDrawablesWithIntrinsicBounds(drawables[0],drawables[1],drawable,drawables[3]);
+        drawable = visible ? crossx : nonecrossx;
+        setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], drawable, drawables[3]);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if(MotionEvent.ACTION_DOWN == event.getAction() && event.getX() >= (getRight() - drawable.getBounds().width())){
+        if (MotionEvent.ACTION_DOWN == event.getAction() && event.getX() >= (getRight() - drawable.getBounds().width())) {
             setText("");
         }
         return super.onTouchEvent(event);
@@ -62,10 +63,10 @@ public class ClearEditText extends EditText{
     protected void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
 
-        if(lengthAfter == 0 && start == 0){
+        if (lengthAfter == 0 && start == 0) {
             visible = false;
             cauhinh();
-        }else{
+        } else {
             visible = true;
             cauhinh();
         }
