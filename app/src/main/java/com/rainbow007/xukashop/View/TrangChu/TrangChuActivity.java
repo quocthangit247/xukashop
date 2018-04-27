@@ -138,7 +138,12 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
             itemDangNhap.setTitle(googleSignInResult.getSignInAccount().getDisplayName());
         }
 
-        if (accessToken != null || googleSignInResult != null) {
+        String hotenUser = modelDangNhap.LayCacheDangNhap(this);
+        if (!hotenUser.equals("")) {
+            itemDangNhap.setTitle(hotenUser);
+        }
+
+        if (accessToken != null || googleSignInResult != null || !hotenUser.equals("")) {
             itemDangXuat.setVisible(true);
         }
 
@@ -154,7 +159,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         int id = item.getItemId();
         switch (id) {
             case R.id.icDangnhap:
-                if (accessToken == null && googleSignInResult == null) {
+                if (accessToken == null && googleSignInResult == null && modelDangNhap.LayCacheDangNhap(this).equals("")) {
                     Intent intent = new Intent(this, DangNhapActivity.class);
                     startActivity(intent);
                 }
@@ -174,6 +179,12 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
                 if (googleSignInResult != null) {
                     Auth.GoogleSignInApi.signOut(mGoogleApiClient);
                     //Log out thi refresh lai menu
+                    this.menu.clear();
+                    this.onCreateOptionsMenu(menu);
+                }
+
+                if (!modelDangNhap.LayCacheDangNhap(this).equals("")) {
+                    modelDangNhap.UpdateCacheDangNhap(this, "");
                     this.menu.clear();
                     this.onCreateOptionsMenu(menu);
                 }

@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -28,11 +30,14 @@ import java.util.Arrays;
 
 public class FragmentDangNhap extends Fragment implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
-    Button btnDangNhapFB, btnDangNhapGG;
+    Button btnDangNhapFB, btnDangNhapGG, btnDangNhap;
     CallbackManager callbackManager;
     GoogleApiClient mGoogleApiClient;
     public static int SIGN_IN_GOOGLE_PLUS = 1;
     ProgressDialog progressDialog;
+    ModelDangNhap modelDangNhap;
+    EditText edtEmail, edtPassword;
+
 
     @Nullable
     @Override
@@ -40,7 +45,7 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener, 
 
         View view = inflater.inflate(R.layout.layout_fragment_dangnhap, container, false);
 
-        ModelDangNhap modelDangNhap = new ModelDangNhap();
+        modelDangNhap = new ModelDangNhap();
         mGoogleApiClient = modelDangNhap.LayGoogleApiClient(getContext(), this);
 
         callbackManager = CallbackManager.Factory.create();
@@ -68,6 +73,12 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener, 
         btnDangNhapGG = view.findViewById(R.id.btnDangNhapGG);
         btnDangNhapGG.setOnClickListener(this);
 
+        btnDangNhap = view.findViewById(R.id.btnDangNhap);
+        btnDangNhap.setOnClickListener(this);
+
+        edtEmail = view.findViewById(R.id.edDiaChiEmailDangNhap);
+        edtPassword = view.findViewById(R.id.edMatKhauDangNhap);
+
 
         return view;
     }
@@ -83,6 +94,18 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener, 
                 startActivityForResult(intent, SIGN_IN_GOOGLE_PLUS);
                 //goi ham progress
                 showProgressDialog();
+                break;
+            case R.id.btnDangNhap:
+                String email = edtEmail.getText().toString();
+                String password = edtPassword.getText().toString();
+                boolean result = modelDangNhap.KiemTraDangNhap(getActivity(), email, password);
+                if (result == true) {
+                    Intent intent1 = new Intent(getActivity(), TrangChuActivity.class);
+                    startActivity(intent1);
+                } else {
+                    Toast.makeText(getActivity(), "Tên đăng nhập hoặc mật khẩu chưa đúng", Toast.LENGTH_SHORT).show();
+                }
+                ;
                 break;
         }
     }
