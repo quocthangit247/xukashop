@@ -3,6 +3,7 @@ package com.rainbow007.xukashop.View.TrangChu.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -40,7 +41,7 @@ public class FragmentChuongTrinhKM extends Fragment {
         }
 
         //khoi tao cac instance
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(),2);
         adapterCTKM = new AdapterCTKM(getActivity(), data);
 
         recyclerView.setLayoutManager(layoutManager);
