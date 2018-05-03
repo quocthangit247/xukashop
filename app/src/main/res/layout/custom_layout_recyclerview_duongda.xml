@@ -5,8 +5,11 @@
     android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/imgKhuyenMaiDuongDa"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:src="@drawable/mix"
+        android:scaleType="centerCrop"
         android:layout_margin="5dp" />
 
     <TextView

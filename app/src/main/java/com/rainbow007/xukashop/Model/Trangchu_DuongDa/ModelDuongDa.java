@@ -1,5 +1,7 @@
 package com.rainbow007.xukashop.Model.Trangchu_DuongDa;
 
+import android.util.Log;
+
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
 import com.rainbow007.xukashop.Model.ObjectClass.ThuongHieu;
@@ -22,22 +24,24 @@ public class ModelDuongDa {
 
         List<ThuongHieu> thuongHieuList = new ArrayList<>();
 
-        List<LoaiSanPham> loaiSanPhamList = new ArrayList<>();
         List<HashMap<String, String>> attrs = new ArrayList<>();
         String dataJson = "";
 
         String duongdan = SERVER_NAME;
 
         HashMap<String, String> hsHam = new HashMap<>();
-        hsHam.put("ham", " ");
+        hsHam.put("ham", "LayDanhSachThuongHieuLon");
 
         attrs.add(hsHam);
 
         DownloadJSON downloadJSON = new DownloadJSON(duongdan, attrs);
         downloadJSON.execute();
+        Log.d("ModelDuongDa","111111");
+
         try {
             dataJson = downloadJSON.get();
             JSONObject jsonObject = new JSONObject(dataJson);
+            Log.d("ModelDuongDa",dataJson);
             JSONArray jsonArrayDsThuongHieu = jsonObject.getJSONArray("DANHSACHTHUONGHIEU");
             int dem = jsonArrayDsThuongHieu.length();
 
@@ -49,6 +53,8 @@ public class ModelDuongDa {
                 thuongHieu.setTenThuongHieu(object.getString("TENTHUONGHIEU"));
                 thuongHieu.setLuotMua(Integer.parseInt(object.getString("LUOTMUA")));
                 thuongHieu.setHinhThuongHieu(object.getString("HINHTHUONGHIEU"));
+                Log.d("ModelDuongDa",thuongHieu.getHinhThuongHieu());
+                Log.d("ModelDuongDa",String.valueOf(thuongHieu.getLuotMua()));
 
                 thuongHieuList.add(thuongHieu);
             }
