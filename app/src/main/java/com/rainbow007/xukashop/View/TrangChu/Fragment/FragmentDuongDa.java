@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.rainbow007.xukashop.CustomAdapter.AdapterDuongDa;
 import com.rainbow007.xukashop.Model.ObjectClass.DuongDa;
+import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.Model.ObjectClass.ThuongHieu;
 import com.rainbow007.xukashop.Presenter.TrangChu_DuongDa.PresenterLogicDuongDa;
 import com.rainbow007.xukashop.R;
@@ -47,10 +48,11 @@ public class FragmentDuongDa extends Fragment implements ViewDuongDa {
     }
 
     @Override
-    public void HienThiDanhSach(List<ThuongHieu> thuongHieus) {
+    public void HienThiDanhSach(List<ThuongHieu> thuongHieus, List<SanPham> sanPhams) {
 
         DuongDa duongDa = new DuongDa();
         duongDa.setThuongHieus(thuongHieus);
+        duongDa.setSanPhams(sanPhams);
         duongDaList.add(duongDa);
 
         AdapterDuongDa adapterDuongDa = new AdapterDuongDa(getContext(),duongDaList);

@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -34,8 +33,6 @@ public class AdapterThuongHieuLon extends RecyclerView.Adapter<AdapterThuongHieu
         TextView txtTieuDe;
         ImageView imgThuongHieu;
         ProgressBar progressBar;
-        LinearLayout linearLayout;
-
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -43,8 +40,6 @@ public class AdapterThuongHieuLon extends RecyclerView.Adapter<AdapterThuongHieu
             txtTieuDe = itemView.findViewById(R.id.txtTieuDeDuongDa);
             imgThuongHieu = itemView.findViewById(R.id.imgHinhThuongHieu);
             progressBar = itemView.findViewById(R.id.progress_bar_download);
-            linearLayout = itemView.findViewById(R.id.linearThuongHieuLon);
-
         }
     }
 

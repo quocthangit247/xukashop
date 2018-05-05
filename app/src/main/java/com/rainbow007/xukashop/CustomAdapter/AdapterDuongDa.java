@@ -2,6 +2,7 @@ package com.rainbow007.xukashop.CustomAdapter;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +55,8 @@ public class AdapterDuongDa extends RecyclerView.Adapter<AdapterDuongDa.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         DuongDa duongDa = duongDaList.get(position);
+
+        // xu ly thuong hieu lon
         AdapterThuongHieuLon adapterThuongHieuLon = new AdapterThuongHieuLon(context, duongDa.getThuongHieus());
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false);
@@ -61,6 +64,13 @@ public class AdapterDuongDa extends RecyclerView.Adapter<AdapterDuongDa.ViewHold
         holder.recyclerViewThuongHieu.setLayoutManager(layoutManager);
         holder.recyclerViewThuongHieu.setAdapter(adapterThuongHieuLon);
         adapterThuongHieuLon.notifyDataSetChanged();
+
+        // xu ly san pham duong da
+        AdapterSanPhamDuongDa adapterSanPhamDuongDa = new AdapterSanPhamDuongDa(context,duongDa.getSanPhams());
+
+        RecyclerView.LayoutManager layoutManagerSanPham = new LinearLayoutManager(context);
+        holder.recyclerViewSanPham.setLayoutManager(layoutManagerSanPham);
+        holder.recyclerViewSanPham.setAdapter(adapterSanPhamDuongDa);
 
     }
 

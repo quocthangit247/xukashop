@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
+import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.Model.ObjectClass.ThuongHieu;
 import com.rainbow007.xukashop.Model.TrangChu.XuLyMenu.XulyJSONMenu;
 
@@ -36,12 +37,12 @@ public class ModelDuongDa {
 
         DownloadJSON downloadJSON = new DownloadJSON(duongdan, attrs);
         downloadJSON.execute();
-        Log.d("ModelDuongDa","111111");
+        Log.d("ModelDuongDa", "111111");
 
         try {
             dataJson = downloadJSON.get();
             JSONObject jsonObject = new JSONObject(dataJson);
-            Log.d("ModelDuongDa",dataJson);
+            Log.d("ModelDuongDa", dataJson);
             JSONArray jsonArrayDsThuongHieu = jsonObject.getJSONArray("DANHSACHTHUONGHIEU");
             int dem = jsonArrayDsThuongHieu.length();
 
@@ -53,8 +54,8 @@ public class ModelDuongDa {
                 thuongHieu.setTenThuongHieu(object.getString("TENTHUONGHIEU"));
                 thuongHieu.setLuotMua(Integer.parseInt(object.getString("LUOTMUA")));
                 thuongHieu.setHinhThuongHieu(object.getString("HINHTHUONGHIEU"));
-                Log.d("ModelDuongDa",thuongHieu.getHinhThuongHieu());
-                Log.d("ModelDuongDa",String.valueOf(thuongHieu.getLuotMua()));
+                Log.d("ModelDuongDa", thuongHieu.getHinhThuongHieu());
+                Log.d("ModelDuongDa", String.valueOf(thuongHieu.getLuotMua()));
 
                 thuongHieuList.add(thuongHieu);
             }
@@ -69,5 +70,52 @@ public class ModelDuongDa {
 
 
         return thuongHieuList;
+    }
+
+    public List<SanPham> LaySanPhamDuongDa() {
+
+        List<SanPham> sanPhamList = new ArrayList<>();
+        List<HashMap<String, String>> attrs = new ArrayList<>();
+        String dataJson = "";
+
+        String duongdan = SERVER_NAME;
+
+        HashMap<String, String> hsHam = new HashMap<>();
+        hsHam.put("ham", "LayDanhSachSanPhamDuongDa");
+
+        attrs.add(hsHam);
+
+        DownloadJSON downloadJSON = new DownloadJSON(duongdan, attrs);
+        downloadJSON.execute();
+        Log.d("ModelDuongDa", "111111");
+
+        try {
+            dataJson = downloadJSON.get();
+            JSONObject jsonObject = new JSONObject(dataJson);
+            Log.d("ModelDuongDa", dataJson);
+            JSONArray jsonArrayDsThuongHieu = jsonObject.getJSONArray("DANHSACHSANPHAM");
+            int dem = jsonArrayDsThuongHieu.length();
+
+            for (int i = 0; i < dem; i++) {
+                SanPham sanPham = new SanPham();
+                JSONObject object = jsonArrayDsThuongHieu.getJSONObject(i);
+
+                sanPham.setTenSp(object.getString("TENSP"));
+                sanPham.setGiaBan(Integer.parseInt(object.getString("GIABAN")));
+                sanPham.setAnhNho(object.getString("ANHNHO"));
+
+                sanPhamList.add(sanPham);
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        return sanPhamList;
     }
 }
