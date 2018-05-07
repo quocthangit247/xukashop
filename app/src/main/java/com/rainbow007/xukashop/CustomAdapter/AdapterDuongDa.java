@@ -68,7 +68,7 @@ public class AdapterDuongDa extends RecyclerView.Adapter<AdapterDuongDa.ViewHold
         // xu ly san pham duong da
         AdapterSanPhamDuongDa adapterSanPhamDuongDa = new AdapterSanPhamDuongDa(context,duongDa.getSanPhams());
 
-        RecyclerView.LayoutManager layoutManagerSanPham = new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
+        RecyclerView.LayoutManager layoutManagerSanPham = new GridLayoutManager(context,3);
         holder.recyclerViewSanPham.setLayoutManager(layoutManagerSanPham);
         holder.recyclerViewSanPham.setAdapter(adapterSanPhamDuongDa);
 
