@@ -15,6 +15,7 @@ import com.rainbow007.xukashop.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class AdapterSanPhamDuongDa extends RecyclerView.Adapter<AdapterSanPhamDuongDa.ViewHolder> {
@@ -58,7 +59,10 @@ public class AdapterSanPhamDuongDa extends RecyclerView.Adapter<AdapterSanPhamDu
 
         SanPham sanPham = sanPhams.get(position);
         holder.txtTenSP.setText(sanPham.getTenSp());
-        holder.txtGiaBan.setText(String.valueOf(sanPham.getGiaBan()));
+
+        DecimalFormat formatter = new DecimalFormat("#,###,###");
+        String giaban = formatter.format(sanPham.getGiaBan());
+        holder.txtGiaBan.setText(giaban);
 
         Picasso.get().load(sanPham.getAnhNho()).resize(150, 150).into(holder.imgSP, new Callback() {
             @Override
