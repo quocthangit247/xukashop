@@ -1,17 +1,20 @@
 package com.rainbow007.xukashop.CustomAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.rainbow007.xukashop.Model.ObjectClass.ThuongHieu;
 import com.rainbow007.xukashop.R;
+import com.rainbow007.xukashop.View.HienThiSanPhamTheoDanhMuc.HienThiSanPhamTheoDanhMucAcitivity;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -33,6 +36,7 @@ public class AdapterThuongHieuLon extends RecyclerView.Adapter<AdapterThuongHieu
         TextView txtTieuDe;
         ImageView imgThuongHieu;
         ProgressBar progressBar;
+        LinearLayout linearLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -40,6 +44,7 @@ public class AdapterThuongHieuLon extends RecyclerView.Adapter<AdapterThuongHieu
             txtTieuDe = itemView.findViewById(R.id.txtTieuDeDuongDa);
             imgThuongHieu = itemView.findViewById(R.id.imgHinhThuongHieu);
             progressBar = itemView.findViewById(R.id.progress_bar_download);
+            linearLayout = itemView.findViewById(R.id.linearThuongHieuLon);
         }
     }
 
@@ -56,8 +61,20 @@ public class AdapterThuongHieuLon extends RecyclerView.Adapter<AdapterThuongHieu
     @Override
     public void onBindViewHolder(final AdapterThuongHieuLon.ViewHolder holder, int position) {
 
-        ThuongHieu thuongHieu = thuongHieus.get(position);
+        final ThuongHieu thuongHieu = thuongHieus.get(position);
+
         holder.txtTieuDe.setText(thuongHieu.getTenThuongHieu());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, HienThiSanPhamTheoDanhMucAcitivity.class);
+                intent.putExtra("MaThuongHieu",thuongHieu.getMaThuongHieu());
+                intent.putExtra("TenThuongHieu",thuongHieu.getTenThuongHieu());
+                context.startActivity(intent);
+            }
+        });
+
 
         Picasso.get().load(thuongHieu.getHinhThuongHieu()).resize(150, 150).into(holder.imgThuongHieu, new Callback() {
             @Override
