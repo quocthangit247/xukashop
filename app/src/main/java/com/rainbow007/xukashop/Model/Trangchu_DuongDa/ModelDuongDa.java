@@ -52,7 +52,6 @@ public class ModelDuongDa {
 
                 thuongHieu.setMaThuongHieu(object.getString("MATHUONGHIEU"));
                 thuongHieu.setTenThuongHieu(object.getString("TENTHUONGHIEU"));
-                thuongHieu.setLuotMua(Integer.parseInt(object.getString("LUOTMUA")));
                 thuongHieu.setHinhThuongHieu(object.getString("HINHTHUONGHIEU"));
                 Log.d("ModelDuongDa", thuongHieu.getHinhThuongHieu());
                 Log.d("ModelDuongDa", String.valueOf(thuongHieu.getLuotMua()));

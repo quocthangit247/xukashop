@@ -2,7 +2,6 @@ package com.rainbow007.xukashop.CustomAdapter;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,11 +65,11 @@ public class AdapterDuongDa extends RecyclerView.Adapter<AdapterDuongDa.ViewHold
         adapterThuongHieuLon.notifyDataSetChanged();
 
         // xu ly san pham duong da
-        AdapterSanPhamDuongDa adapterSanPhamDuongDa = new AdapterSanPhamDuongDa(context,duongDa.getSanPhams());
+        AdapterSanPham adapterSanPham = new AdapterSanPham(context,R.layout.custom_layout_recyclerview_sanpham,duongDa.getSanPhams());
 
         RecyclerView.LayoutManager layoutManagerSanPham = new GridLayoutManager(context,3);
         holder.recyclerViewSanPham.setLayoutManager(layoutManagerSanPham);
-        holder.recyclerViewSanPham.setAdapter(adapterSanPhamDuongDa);
+        holder.recyclerViewSanPham.setAdapter(adapterSanPham);
 
     }
 

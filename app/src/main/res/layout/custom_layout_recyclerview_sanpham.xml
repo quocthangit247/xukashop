@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:autoSizeTextType="uniform"
+                android:maxLength="30"
                 android:text="Ten san pham" />
 
             <TextView

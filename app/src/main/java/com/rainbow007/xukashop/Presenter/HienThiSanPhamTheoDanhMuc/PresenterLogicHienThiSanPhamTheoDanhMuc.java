@@ -18,6 +18,11 @@ public class PresenterLogicHienThiSanPhamTheoDanhMuc implements IPresenterHienTh
 
     @Override
     public void LayDanhSachSanPham(String maloai) {
-        List<SanPham> sanPhamList = modelHienThiSanPhamTheoDanhMuc.LayDanhSachSanPhamTheoMaThuongHieu(maloai);
+        List<SanPham> sanPhamList = modelHienThiSanPhamTheoDanhMuc.LayDanhSachSanPhamTheoMaThuongHieu(maloai, 20);
+        if (sanPhamList.size() > 0) {
+            viewHienThiSanPhamTheoDanhMuc.HienThiDanhSachSanPham(sanPhamList);
+        } else {
+            viewHienThiSanPhamTheoDanhMuc.LoiHienThi();
+        }
     }
 }

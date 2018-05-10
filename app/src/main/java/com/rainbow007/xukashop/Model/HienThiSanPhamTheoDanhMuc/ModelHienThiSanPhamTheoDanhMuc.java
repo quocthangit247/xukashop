@@ -27,13 +27,13 @@ public class ModelHienThiSanPhamTheoDanhMuc {
         String duongdan = SERVER_NAME;
 
         HashMap<String, String> hsHam = new HashMap<>();
-        hsHam.put("ham", "LayDanhSachSanPhamDuongDa");
+        hsHam.put("ham", "LayDanhSachSanPhamTheoMaThuongHieu");
 
         HashMap<String, String> hsMaLoai = new HashMap<>();
         hsMaLoai.put("maloaiThuongHieu", maloai);
 
         HashMap<String, String> hsLimit = new HashMap<>();
-        hsMaLoai.put("limit", String.valueOf(limit));
+        hsLimit.put("limit", String.valueOf(limit));
 
         attrs.add(hsHam);
         attrs.add(hsMaLoai);
