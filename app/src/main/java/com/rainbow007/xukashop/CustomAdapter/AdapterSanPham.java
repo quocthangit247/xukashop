@@ -1,6 +1,8 @@
 package com.rainbow007.xukashop.CustomAdapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 
 import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.R;
+import com.rainbow007.xukashop.View.ChiTietSanPham.ChiTietSanPhamActivity;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -24,7 +27,7 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
     List<SanPham> sanPhams;
     int layout;
 
-    public  AdapterSanPham(Context context, int layout, List<SanPham> sanPhams) {
+    public AdapterSanPham(Context context, int layout, List<SanPham> sanPhams) {
         this.context = context;
         this.sanPhams = sanPhams;
         this.layout = layout;
@@ -35,6 +38,7 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
         TextView txtTenSP, txtGiaBan;
         ImageView imgSP;
         ProgressBar progressBar;
+        CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -43,6 +47,7 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
             txtGiaBan = itemView.findViewById(R.id.txtGiaDuongDa);
             imgSP = itemView.findViewById(R.id.imgSanPhamDuongDa);
             progressBar = itemView.findViewById(R.id.progress_bar_download_sp_duongda);
+            cardView = itemView.findViewById(R.id.idCardView);
         }
     }
 
@@ -64,7 +69,15 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String giaban = formatter.format(sanPham.getGiaBan());
-        holder.txtGiaBan.setText(giaban);
+        holder.txtGiaBan.setText(giaban + " VND");
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ChiTietSanPhamActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
 
         Picasso.get().load(sanPham.getAnhNho()).resize(150, 150).into(holder.imgSP, new Callback() {
             @Override

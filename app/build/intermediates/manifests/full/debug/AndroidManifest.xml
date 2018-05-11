@@ -43,6 +43,7 @@
             android:label="Đăng nhập/Đăng ký"
             android:screenOrientation="portrait" />
         <activity android:name="com.rainbow007.xukashop.View.HienThiSanPhamTheoDanhMuc.HienThiSanPhamTheoDanhMucAcitivity" />
+        <activity android:name="com.rainbow007.xukashop.View.ChiTietSanPham.ChiTietSanPhamActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

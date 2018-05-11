@@ -35,6 +35,7 @@
             android:label="Đăng nhập/Đăng ký"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".View.HienThiSanPhamTheoDanhMuc.HienThiSanPhamTheoDanhMucAcitivity" />
+        <activity android:name=".View.ChiTietSanPham.ChiTietSanPhamActivity" />
     </application>
 
 </manifest>
