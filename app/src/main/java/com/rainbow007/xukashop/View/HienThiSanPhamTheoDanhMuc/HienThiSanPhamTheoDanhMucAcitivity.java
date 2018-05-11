@@ -97,7 +97,7 @@ public class HienThiSanPhamTheoDanhMucAcitivity extends AppCompatActivity implem
 
         List<SanPham> sanPhamLoadMore;
 
-        sanPhamLoadMore = sanPhamTheoDanhMuc.LayDanhSachSanPhamLoadMore(mathuonghieu, tongItem, progressBar);
+        sanPhamLoadMore = sanPhamTheoDanhMuc.LayDanhSachSanPhamLoadMore(mathuonghieu, tongItem);
         //merge 2 list
         sanPhamList1.addAll(sanPhamLoadMore);
         adapterSanPham.notifyDataSetChanged();

@@ -29,14 +29,9 @@ public class PresenterLogicHienThiSanPhamTheoDanhMuc implements IPresenterHienTh
         }
     }
 
-    public List<SanPham> LayDanhSachSanPhamLoadMore(String maloai, int limit, ProgressBar progressBar) {
+    public List<SanPham> LayDanhSachSanPhamLoadMore(String maloai, int limit) {
 
-        progressBar.setVisibility(View.VISIBLE);
         List<SanPham> sanPhamList = modelHienThiSanPhamTheoDanhMuc.LayDanhSachSanPhamTheoMaThuongHieu(maloai, limit);
-
-        if (sanPhamList.size() != 0) {
-            progressBar.setVisibility(View.GONE);
-        }
 
         return sanPhamList;
     }
