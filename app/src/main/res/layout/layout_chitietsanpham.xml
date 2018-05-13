@@ -26,13 +26,15 @@
                 app:layout_collapseMode="parallax">
 
                 <TextView
+                    android:id="@+id/txtTenSp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Test San Pham"
+                    android:text="Ten San Pham"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/txtGiaSp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1000000 VND"
@@ -47,6 +49,7 @@
                     android:transformPivotY="0dp" />
 
                 <ImageView
+                    android:id="@+id/imgSp"
                     android:layout_width="wrap_content"
                     android:layout_height="350dp"
                     android:src="@drawable/mix" />
@@ -86,12 +89,60 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorGray"
         android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--Phần chi tiết sản phẩm-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chi tiết sản phẩm"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtThongTinChiTiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/bgToolbar"
+            android:padding="10dp"
+            android:text="Mua Ngay" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/colorFB"
+            android:padding="10dp"
+            android:src="@drawable/icon_add_shopping_cart_white_18dp" />
 
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

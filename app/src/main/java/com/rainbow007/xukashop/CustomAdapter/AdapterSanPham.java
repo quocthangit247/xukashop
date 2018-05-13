@@ -62,18 +62,25 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(final AdapterSanPham.ViewHolder holder, int position) {
+    public void onBindViewHolder(final AdapterSanPham.ViewHolder holder, final int position) {
 
-        SanPham sanPham = sanPhams.get(position);
+        final SanPham sanPham = sanPhams.get(position);
+        Log.d("masanpham", String.valueOf(sanPham.getMasp()));
         holder.txtTenSP.setText(sanPham.getTenSp());
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String giaban = formatter.format(sanPham.getGiaBan());
         holder.txtGiaBan.setText(giaban + " VND");
+
+        holder.cardView.setTag(sanPham.getMasp());
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ChiTietSanPhamActivity.class);
+//                intent.putExtra("masp", (int) view.getTag());
+                intent.putExtra("masp",sanPham.getMasp());
+                Log.d("ModelSP", String.valueOf(sanPhams.get(position).getMasp()));
                 context.startActivity(intent);
             }
         });
