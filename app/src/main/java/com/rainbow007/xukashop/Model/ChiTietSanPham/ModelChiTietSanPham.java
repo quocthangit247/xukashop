@@ -48,7 +48,6 @@ public class ModelChiTietSanPham {
             for (int i = 0; i < dem; i++) {
 
                 JSONObject object = jsonArrayDsThuongHieu.getJSONObject(i);
-// ông đọc mã sản phẩm đi
 
                 sanPham.setTenSp(object.getString("TENSP"));
                 sanPham.setGiaBan(Integer.parseInt(object.getString("GIABAN")));
