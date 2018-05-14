@@ -29,8 +29,8 @@ public class ModelChiTietSanPham {
         HashMap<String, String> hsHam = new HashMap<>();
         hsHam.put("ham", "LaySanPhamTheoMaSp");
 
-        HashMap<String,String> hsMasp = new HashMap<>();
-        hsMasp.put("masp",masp);
+        HashMap<String, String> hsMasp = new HashMap<>();
+        hsMasp.put("masp", masp);
 
         attrs.add(hsHam);
         attrs.add(hsMasp);
@@ -49,10 +49,12 @@ public class ModelChiTietSanPham {
 
                 JSONObject object = jsonArrayDsThuongHieu.getJSONObject(i);
 // ông đọc mã sản phẩm đi
+
                 sanPham.setTenSp(object.getString("TENSP"));
                 sanPham.setGiaBan(Integer.parseInt(object.getString("GIABAN")));
                 sanPham.setAnhNho(object.getString("ANHNHO"));
                 sanPham.setThongTin(object.getString("THONGTIN"));
+                sanPham.setMasp(Integer.parseInt(object.getString("MASP")));
 
             }
 
