@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ten San Pham"
-                    android:textSize="20dp"
+                    android:textSize="20dp" android:gravity="center"
                     android:textStyle="bold" />
 
                 <TextView
@@ -50,8 +50,9 @@
 
                 <ImageView
                     android:id="@+id/imgSp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="380dp"
                     android:layout_height="350dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/mix" />
 
                 <LinearLayout

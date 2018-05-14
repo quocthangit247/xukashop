@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -33,23 +33,6 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
         this.layout = layout;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        TextView txtTenSP, txtGiaBan;
-        ImageView imgSP;
-        ProgressBar progressBar;
-        CardView cardView;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            txtTenSP = itemView.findViewById(R.id.txtTieuDeSanPhamDuongDa);
-            txtGiaBan = itemView.findViewById(R.id.txtGiaDuongDa);
-            imgSP = itemView.findViewById(R.id.imgSanPhamDuongDa);
-            progressBar = itemView.findViewById(R.id.progress_bar_download_sp_duongda);
-            cardView = itemView.findViewById(R.id.idCardView);
-        }
-    }
 
     @Override
     public AdapterSanPham.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -61,6 +44,11 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
         return viewHolder;
     }
 
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.bindData(sanPhams.get(position));
+    }
+/*comment dong nay lai
     @Override
     public void onBindViewHolder(final AdapterSanPham.ViewHolder holder, final int position) {
 
@@ -78,9 +66,8 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ChiTietSanPhamActivity.class);
-//                intent.putExtra("masp", (int) view.getTag());
-                intent.putExtra("masp",sanPham.getMasp());
-                Log.d("ModelSP", String.valueOf(sanPhams.get(position).getMasp()));
+                intent.putExtra("masp", (int) view.getTag());
+                Log.d("ModelSP111111", String.valueOf(sanPham.getMasp()));
                 context.startActivity(intent);
             }
         });
@@ -99,11 +86,57 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
         });
         Log.d("AdapterSPDuongDa", "picaso");
     }
-
+*/
 
     @Override
     public int getItemCount() {
         return sanPhams.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        TextView txtTenSP, txtGiaBan;
+        ImageView imgSP;
+        ProgressBar progressBar;
+        CardView cardView;
+        LinearLayout linearLayout;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+
+            txtTenSP = itemView.findViewById(R.id.txtTieuDeSanPhamDuongDa);
+            txtGiaBan = itemView.findViewById(R.id.txtGiaDuongDa);
+            imgSP = itemView.findViewById(R.id.imgSanPhamDuongDa);
+            progressBar = itemView.findViewById(R.id.progress_bar_download_sp_duongda);
+            cardView = itemView.findViewById(R.id.idCardView);
+            linearLayout = itemView.findViewById(R.id.linearSanPham);
+        }
+
+        public void bindData(final SanPham sanPham) {
+            txtTenSP.setText(sanPham.getTenSp());
+            DecimalFormat formatter = new DecimalFormat("#,###,###");
+            String giaban = formatter.format(sanPham.getGiaBan());
+            txtGiaBan.setText(giaban + " VND");
+            Picasso.get().load(sanPham.getAnhNho()).resize(150, 150).into(imgSP, new Callback() {
+                @Override
+                public void onSuccess() {
+                    progressBar.setVisibility(View.GONE);
+                }
+
+                @Override
+                public void onError(Exception e) {
+
+                }
+            });
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, ChiTietSanPhamActivity.class);
+                    intent.putExtra("masp", sanPham);
+                    context.startActivity(intent);
+                }
+            });
+        }
     }
 
 }

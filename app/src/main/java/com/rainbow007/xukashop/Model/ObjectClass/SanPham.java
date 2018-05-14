@@ -1,6 +1,9 @@
 package com.rainbow007.xukashop.Model.ObjectClass;
 
-public class SanPham {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class SanPham implements Parcelable{
 
     private int masp;
     private int giaNhap;
@@ -12,6 +15,34 @@ public class SanPham {
     private String thongTin;
     private String maLoaiSp;
     private String maLoaiThuongHieu;
+
+    public SanPham() {
+    }
+
+    protected SanPham(Parcel in) {
+        masp = in.readInt();
+        giaNhap = in.readInt();
+        giaBan = in.readInt();
+        soluong = in.readInt();
+        tenSp = in.readString();
+        anhNho = in.readString();
+        anhLon = in.readString();
+        thongTin = in.readString();
+        maLoaiSp = in.readString();
+        maLoaiThuongHieu = in.readString();
+    }
+
+    public static final Creator<SanPham> CREATOR = new Creator<SanPham>() {
+        @Override
+        public SanPham createFromParcel(Parcel in) {
+            return new SanPham(in);
+        }
+
+        @Override
+        public SanPham[] newArray(int size) {
+            return new SanPham[size];
+        }
+    };
 
     public int getMasp() {
         return masp;
@@ -91,5 +122,24 @@ public class SanPham {
 
     public void setMaLoaiThuongHieu(String maLoaiThuongHieu) {
         this.maLoaiThuongHieu = maLoaiThuongHieu;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(masp);
+        parcel.writeInt(giaNhap);
+        parcel.writeInt(giaBan);
+        parcel.writeInt(soluong);
+        parcel.writeString(tenSp);
+        parcel.writeString(anhNho);
+        parcel.writeString(anhLon);
+        parcel.writeString(thongTin);
+        parcel.writeString(maLoaiSp);
+        parcel.writeString(maLoaiThuongHieu);
     }
 }
