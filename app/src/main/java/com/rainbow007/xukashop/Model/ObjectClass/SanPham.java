@@ -15,6 +15,7 @@ public class SanPham implements Parcelable{
     private String thongTin;
     private String maLoaiSp;
     private String maLoaiThuongHieu;
+    private byte[] hinhGioHang;
 
     public SanPham() {
     }
@@ -124,6 +125,13 @@ public class SanPham implements Parcelable{
         this.maLoaiThuongHieu = maLoaiThuongHieu;
     }
 
+    public byte[] getHinhGioHang() {
+        return hinhGioHang;
+    }
+
+    public void setHinhGioHang(byte[] hinhGioHang) {
+        this.hinhGioHang = hinhGioHang;
+    }
     @Override
     public int describeContents() {
         return 0;
@@ -142,4 +150,5 @@ public class SanPham implements Parcelable{
         parcel.writeString(maLoaiSp);
         parcel.writeString(maLoaiThuongHieu);
     }
+
 }
