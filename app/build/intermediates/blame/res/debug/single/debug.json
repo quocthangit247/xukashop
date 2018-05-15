@@ -808,6 +808,10 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_thanhtoan.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_thanhtoan.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -1038,6 +1042,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_ic_sentiment_satisfied_black_24dp.png.flat",
         "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/ic_sentiment_satisfied_black_24dp.png"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_border_thanhtoan.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/border_thanhtoan.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_custom_item_cart.xml.flat",
@@ -1416,12 +1424,12 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
-        "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b1569f3da769a0e41c4bd386ea848bda/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
-    },
-    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/037414e7257e4d77ba954ad74af1ada3/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
+        "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b1569f3da769a0e41c4bd386ea848bda/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -1758,6 +1766,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/111fac204c052e3bce9fa97c8dc6ee59/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_ship.png.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/ship.png"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -2180,12 +2192,12 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.32.0.aar/36e6d7d0bd9aee1ce270b6208f8fe28d/res/drawable-xxhdpi-v4/messenger_bubble_large_blue.png"
     },
     {
-        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/color-v23_abc_tint_default.xml.flat",
-        "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/color-v23/abc_tint_default.xml"
-    },
-    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_ic_delete_black_24dp.png.flat",
         "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/color-v23_abc_tint_default.xml.flat",
+        "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/color-v23/abc_tint_default.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
@@ -2214,6 +2226,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_visa.png.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/drawable/visa.png"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/anim_tooltip_exit.xml.flat",

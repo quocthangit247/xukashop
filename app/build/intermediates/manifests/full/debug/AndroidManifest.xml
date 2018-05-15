@@ -49,6 +49,9 @@
         <activity
             android:name="com.rainbow007.xukashop.View.GioHang.GioHangActivity"
             android:label="Giỏ Hàng" />
+        <activity
+            android:name="com.rainbow007.xukashop.View.ThanhToan.ThanhToanActivity"
+            android:label="Thanh Toán" />
 
         <meta-data
             android:name="android.support.VERSION"

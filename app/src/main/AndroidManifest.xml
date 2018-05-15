@@ -41,6 +41,8 @@
         <activity
             android:name=".View.GioHang.GioHangActivity"
             android:label="Giỏ Hàng" />
+        <activity android:name=".View.ThanhToan.ThanhToanActivity"
+            android:label="Thanh Toán"/>
     </application>
 
 </manifest>

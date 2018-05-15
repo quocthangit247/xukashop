@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
 MERGED from [com.android.support:design:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b1569f3da769a0e41c4bd386ea848bda/AndroidManifest.xml:17:1-31:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/075db1a93698f57f27fcfa86e57dd257/AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:4.32.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/a60b1906772110b07cd09ffd43cf7388/AndroidManifest.xml:21:1-31:12
@@ -41,20 +41,20 @@ MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /Use
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/53c5e4b6e58c47a532912c7be628d6ba/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/e6d153065336e0ea8ec6b19543d14a17/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/7d6793100706d2c83028d13c56aa53fc/AndroidManifest.xml:2:1-6:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-46:12
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:2:11-69
@@ -75,7 +75,7 @@ ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/Android
 	android:name
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:8:22-73
 application
-ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:10:5-44:19
+ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:10:5-46:19
 MERGED from [com.android.support:design:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b1569f3da769a0e41c4bd386ea848bda/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b1569f3da769a0e41c4bd386ea848bda/AndroidManifest.xml:25:5-29:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.32.0] /Users/rainbow007/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.32.0.aar/075db1a93698f57f27fcfa86e57dd257/AndroidManifest.xml:28:5-29:19
@@ -184,6 +184,12 @@ ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/Android
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:43:13-37
 	android:name
 		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:42:13-57
+activity#com.rainbow007.xukashop.View.ThanhToan.ThanhToanActivity
+ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:44:9-45:41
+	android:label
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:45:13-39
+	android:name
+		ADDED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml:44:19-67
 uses-sdk
 INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/AndroidManifest.xml
