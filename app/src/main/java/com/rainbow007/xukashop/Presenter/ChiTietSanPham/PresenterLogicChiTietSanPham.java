@@ -8,11 +8,17 @@ import com.rainbow007.xukashop.Model.GioHang.ModelGioHang;
 import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.View.ChiTietSanPham.ViewChiTietSanPham;
 
+import java.util.List;
+
 public class PresenterLogicChiTietSanPham implements IPresenterChiTietSanPham {
 
     ViewChiTietSanPham viewChiTietSanPham;
     ModelChiTietSanPham modelChiTietSanPham;
     ModelGioHang modelGioHang;
+
+    public PresenterLogicChiTietSanPham() {
+        modelGioHang = new ModelGioHang();
+    }
 
     public PresenterLogicChiTietSanPham(ViewChiTietSanPham viewChiTietSanPham) {
         this.viewChiTietSanPham = viewChiTietSanPham;
@@ -38,5 +44,11 @@ public class PresenterLogicChiTietSanPham implements IPresenterChiTietSanPham {
         } else {
             viewChiTietSanPham.ThemGioHangThatBai();
         }
+    }
+
+    public int DemSanPhamTrongGioHang(Context context) {
+        modelGioHang.MoKetNoiSQL(context);
+        List<SanPham> sanPhamList = modelGioHang.LayDanhSachSanPhamTrongGioHang();
+        return sanPhamList.size();
     }
 }

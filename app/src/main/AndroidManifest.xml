@@ -35,7 +35,12 @@
             android:label="Đăng nhập/Đăng ký"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".View.HienThiSanPhamTheoDanhMuc.HienThiSanPhamTheoDanhMucAcitivity" />
-        <activity android:name=".View.ChiTietSanPham.ChiTietSanPhamActivity" />
+        <activity
+            android:name=".View.ChiTietSanPham.ChiTietSanPhamActivity"
+            android:label="Chi tiết sản phẩm" />
+        <activity
+            android:name=".View.GioHang.GioHangActivity"
+            android:label="Giỏ Hàng" />
     </application>
 
 </manifest>

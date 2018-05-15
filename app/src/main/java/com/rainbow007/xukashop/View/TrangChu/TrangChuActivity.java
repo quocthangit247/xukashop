@@ -15,8 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
@@ -30,9 +32,11 @@ import com.rainbow007.xukashop.CustomAdapter.ExpandAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.Model.DangNhap_DangKy.ModelDangNhap;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
+import com.rainbow007.xukashop.Presenter.ChiTietSanPham.PresenterLogicChiTietSanPham;
 import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMenu;
 import com.rainbow007.xukashop.R;
 import com.rainbow007.xukashop.View.DangNhap_DangKy.DangNhapActivity;
+import com.rainbow007.xukashop.View.GioHang.GioHangActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,7 +66,8 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     GoogleSignInResult googleSignInResult;
     CollapsingToolbarLayout collapsingToolbarLayout;
     AppBarLayout appBarLayout;
-
+    TextView txtGioHang;
+    PresenterLogicChiTietSanPham presenterLogicChiTietSanPham;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +110,23 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.menu_trangchu, menu);
         this.menu = menu;
+
+        MenuItem itemGioHang = menu.findItem(R.id.icCart);
+        View giaoDienCustomGioHang = itemGioHang.getActionView();
+        txtGioHang = giaoDienCustomGioHang.findViewById(R.id.txtSoLuongSanPhamGioHang);
+
+        giaoDienCustomGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(TrangChuActivity.this, GioHangActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        presenterLogicChiTietSanPham = new PresenterLogicChiTietSanPham();
+        txtGioHang.setText(String.valueOf(presenterLogicChiTietSanPham.DemSanPhamTrongGioHang(this)));
 
         itemDangNhap = menu.findItem(R.id.icDangnhap);
         itemDangXuat = menu.findItem(R.id.icDangXuat);
@@ -188,6 +210,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
                     this.menu.clear();
                     this.onCreateOptionsMenu(menu);
                 }
+                break;
 
 
         }
@@ -217,5 +240,11 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
             LinearLayout linearLayout = appBarLayout.findViewById(R.id.lnSearch);
             linearLayout.animate().alpha(1).setDuration(200);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 }

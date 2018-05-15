@@ -8,7 +8,7 @@
         android:visible="false"
         app:showAsAction="always" />
     <item
-        android:id="@+id/Cart"
+        android:id="@+id/icCart"
         android:icon="@drawable/ic_shopping_cart_white_24dp"
         android:title="Cart"
         app:actionLayout="@layout/custom_item_cart"
@@ -44,6 +44,10 @@
                 android:icon="@drawable/ic_event_note_black_24dp"
                 android:title="Chính sách "></item>
             <item
+                android:id="@+id/icThongKe"
+                android:icon="@drawable/chart_bar"
+                android:title="Thống kê"></item>
+            <item
                 android:id="@+id/icTroGiup"
                 android:icon="@drawable/ic_help_outline_black_24dp"
                 android:title="Trợ giúp"></item>
@@ -52,6 +56,7 @@
                 android:icon="@drawable/ic_logout"
                 android:title="Đăng Xuất"
                 android:visible="false"></item>
+
         </menu>
     </item>
 </menu>

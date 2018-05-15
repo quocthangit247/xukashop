@@ -59,6 +59,7 @@ public class ModelGioHang {
             sanPham.setHinhGioHang(hinhanh);
 
             sanPhamList.add(sanPham);
+            cursor.moveToNext();
         }
 
 

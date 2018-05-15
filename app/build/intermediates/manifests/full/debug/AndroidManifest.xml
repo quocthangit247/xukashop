@@ -43,7 +43,12 @@
             android:label="Đăng nhập/Đăng ký"
             android:screenOrientation="portrait" />
         <activity android:name="com.rainbow007.xukashop.View.HienThiSanPhamTheoDanhMuc.HienThiSanPhamTheoDanhMucAcitivity" />
-        <activity android:name="com.rainbow007.xukashop.View.ChiTietSanPham.ChiTietSanPhamActivity" />
+        <activity
+            android:name="com.rainbow007.xukashop.View.ChiTietSanPham.ChiTietSanPhamActivity"
+            android:label="Chi tiết sản phẩm" />
+        <activity
+            android:name="com.rainbow007.xukashop.View.GioHang.GioHangActivity"
+            android:label="Giỏ Hàng" />
 
         <meta-data
             android:name="android.support.VERSION"
