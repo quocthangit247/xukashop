@@ -68,6 +68,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     AppBarLayout appBarLayout;
     TextView txtGioHang;
     PresenterLogicChiTietSanPham presenterLogicChiTietSanPham;
+    boolean onPause = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -245,6 +246,15 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     @Override
     protected void onResume() {
         super.onResume();
+        if (onPause){
+            txtGioHang.setText(String.valueOf(presenterLogicChiTietSanPham.DemSanPhamTrongGioHang(this)));
+        }
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        onPause = true;
     }
 }

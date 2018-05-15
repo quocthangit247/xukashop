@@ -20,7 +20,6 @@ import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.Presenter.ChiTietSanPham.PresenterLogicChiTietSanPham;
 import com.rainbow007.xukashop.R;
 import com.rainbow007.xukashop.View.GioHang.GioHangActivity;
-import com.rainbow007.xukashop.View.TrangChu.TrangChuActivity;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -34,7 +33,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
     ImageButton imageButton;
     Toolbar toolbar;
     SanPham sanPhamGioHang;
-
+    boolean onPause = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -108,7 +107,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
                 byte[] hinhsanphamgiohang = byteArrayOutputStream.toByteArray();
 
                 sanPhamGioHang.setHinhGioHang(hinhsanphamgiohang);
-
+                sanPhamGioHang.setSoluong(1);
                 presenterLogicChiTietSanPham.ThemGioHang(sanPhamGioHang, this);
 
                 break;
@@ -126,5 +125,18 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
         Toast.makeText(this, "SP da co trong gio hang", Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (onPause) {
+            txtGioHang.setText(String.valueOf(presenterLogicChiTietSanPham.DemSanPhamTrongGioHang(this)));
+        }
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        onPause = true;
+    }
 }
