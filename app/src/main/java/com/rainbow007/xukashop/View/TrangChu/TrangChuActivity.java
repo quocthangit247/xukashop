@@ -79,7 +79,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpaper);
         drawerLayout = findViewById(R.id.drawserLayout);
-        expandableListView = findViewById(R.id.epMenu);
+//        expandableListView = findViewById(R.id.epMenu);
         appBarLayout = findViewById(R.id.appbar);
         collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
 
@@ -87,12 +87,12 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
-        drawerLayout.addDrawerListener(drawerToggle);
-
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        drawerToggle.syncState();
+//        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
+////        drawerLayout.addDrawerListener(drawerToggle);
+////
+////        getSupportActionBar().setHomeButtonEnabled(true);
+////        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+////        drawerToggle.syncState();
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
@@ -176,8 +176,8 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (drawerToggle.onOptionsItemSelected(item))
-            return true;
+//        if (drawerToggle.onOptionsItemSelected(item))
+//            return true;
 
         int id = item.getItemId();
         switch (id) {
@@ -221,9 +221,9 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
 
     @Override
     public void HienThiDanhSachMenu(List<LoaiSanPham> loaiSanPhamList) {
-        ExpandAdapter expandAdapter = new ExpandAdapter(this, loaiSanPhamList);
-        expandableListView.setAdapter(expandAdapter);
-        expandAdapter.notifyDataSetChanged();
+//        ExpandAdapter expandAdapter = new ExpandAdapter(this, loaiSanPhamList);
+//        expandableListView.setAdapter(expandAdapter);
+//        expandAdapter.notifyDataSetChanged();
 
     }
 

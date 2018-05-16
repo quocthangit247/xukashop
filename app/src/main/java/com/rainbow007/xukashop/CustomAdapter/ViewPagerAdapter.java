@@ -4,7 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentChuongTrinhKM;
 import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentBestSeller;
 import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentDuongDa;
 import com.rainbow007.xukashop.View.TrangChu.Fragment.FragmentNuocHoa;
@@ -29,7 +28,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
 
-        listFragment.add(new FragmentChuongTrinhKM());
         listFragment.add(new FragmentBestSeller());
         listFragment.add(new FragmentTrending());
         listFragment.add(new FragmentDuongDa());
@@ -38,7 +36,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         listFragment.add(new FragmentPhuKien());
         listFragment.add(new FragmentThuongHieu());
 
-        titleFragment.add("Chương trình khuyến mãi");
         titleFragment.add("Sản phẩm mua nhiều");
         titleFragment.add("Xu thế");
         titleFragment.add("Dưỡng da");

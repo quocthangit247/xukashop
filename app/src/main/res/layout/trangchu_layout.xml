@@ -28,8 +28,8 @@
                     android:id="@+id/toolBar"
                     android:layout_width="match_parent"
                     android:layout_height="?android:attr/actionBarSize"
-                    app:layout_scrollFlags="scroll|enterAlways"
                     app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways"
                     app:logo="@drawable/logo"
                     app:theme="@style/menuItem">
 
@@ -103,14 +103,14 @@
 
     </android.support.design.widget.CoordinatorLayout>
 
-    <ExpandableListView
-        android:id="@+id/epMenu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/colorWhite">
+    <!--<ExpandableListView-->
+    <!--android:id="@+id/epMenu"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:background="@color/colorWhite">-->
 
-    </ExpandableListView>
+    <!--</ExpandableListView>-->
 </android.support.v4.widget.DrawerLayout>
 
 
