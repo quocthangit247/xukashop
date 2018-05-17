@@ -34,6 +34,7 @@
             android:textColor="@color/bgToolbar" />
 
         <EditText
+            android:id="@+id/edtTenNguoiDung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -42,6 +43,7 @@
             android:textColor="@android:color/black" />
 
         <EditText
+            android:id="@+id/edtDiaChi"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="5dp"
@@ -51,11 +53,13 @@
             android:textColor="@android:color/black" />
 
         <EditText
+            android:id="@+id/edtSodt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/border_thanhtoan"
             android:hint="Số điện thoại"
+            android:inputType="number"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -70,26 +74,34 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/imgNhanTienKhiGiaoHang"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:scaleType="centerInside"
                 android:src="@drawable/ship" />
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/imgChuyenKhoan"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:scaleType="centerInside"
                 android:src="@drawable/visa" />
         </LinearLayout>
 
         <CheckBox
+            android:id="@+id/cbThoaThuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Tôi cam kết các thông tin trên hoàn toàn chính xác" />
 
         <Button
+            android:id="@+id/btnThanhToan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
