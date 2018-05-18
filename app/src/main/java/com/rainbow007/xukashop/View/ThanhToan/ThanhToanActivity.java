@@ -1,8 +1,10 @@
 package com.rainbow007.xukashop.View.ThanhToan;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rainbow007.xukashop.Model.ObjectClass.ChiTietHoaDon;
@@ -28,9 +31,11 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
     EditText edtTenNguoiNhan, edtDiaChi, edtSdt;
     ImageButton imgNhanTienKhiNhanHang, imgChuyenKhoan;
     Button btnThanghToan;
+    TextView txtNhanTienKhiGiaoHang, txtChuyenKhoan;
     CheckBox cb;
     PresenterLogicThanhToan presenterLogicThanhToan;
     List<ChiTietHoaDon> chiTietHoaDons = new ArrayList<>();
+    int chonHinhThuc = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,14 +49,20 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
         imgChuyenKhoan = findViewById(R.id.imgChuyenKhoan);
         btnThanghToan = findViewById(R.id.btnThanhToan);
         cb = findViewById(R.id.cbThoaThuan);
+        txtNhanTienKhiGiaoHang = findViewById(R.id.txtNhanTienKhiGiaoHang);
+        txtChuyenKhoan = findViewById(R.id.txtChuyenKhoan);
 
         btnThanghToan.setOnClickListener(this);
+        imgChuyenKhoan.setOnClickListener(this);
+        imgNhanTienKhiNhanHang.setOnClickListener(this);
 
         toolbar = findViewById(R.id.toolbarThanhToan);
         setSupportActionBar(toolbar);
 
-        presenterLogicThanhToan = new PresenterLogicThanhToan(this);
-        presenterLogicThanhToan.LayDanhSachSanPhamTrongGioHang(this);
+        presenterLogicThanhToan = new PresenterLogicThanhToan(this, this);
+        presenterLogicThanhToan.LayDanhSachSanPhamTrongGioHang();
+
+
     }
 
     @Override
@@ -70,6 +81,7 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
                         hoaDon.setTenKH(tenKh);
                         hoaDon.setDiaChiGiaoHang(diachi);
                         hoaDon.setSdt(sdt);
+                        hoaDon.setChuyenKhoan(chonHinhThuc);
                         hoaDon.setChiTietHoaDonList(chiTietHoaDons);
 
                         presenterLogicThanhToan.ThemHoaDon(hoaDon);
@@ -81,6 +93,16 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
                     Toast.makeText(this, "Bạn chưa nhập đầy đủ thông tin !!!", Toast.LENGTH_SHORT).show();
                 }
 
+                break;
+
+            case R.id.imgNhanTienKhiGiaoHang:
+                ChonHinhThucGiaoHang(txtNhanTienKhiGiaoHang, txtChuyenKhoan);
+                chonHinhThuc =0;
+                break;
+
+            case R.id.imgChuyenKhoan:
+                ChonHinhThucGiaoHang(txtChuyenKhoan, txtNhanTienKhiGiaoHang);
+                chonHinhThuc=1;
                 break;
         }
     }
@@ -109,4 +131,27 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
             chiTietHoaDons.add(chiTietHoaDon);
         }
     }
+
+    private void ChonHinhThucGiaoHang(TextView txtDuocChon, TextView txtHuyChon) {
+
+        txtDuocChon.setTextColor(maColor(R.color.colorFB));
+        txtHuyChon.setTextColor(maColor(R.color.colorBlack));
+
+    }
+
+    private int maColor(int idColor) {
+
+        int color = 0;
+        if (Build.VERSION.SDK_INT > 21) {
+
+            color = ContextCompat.getColor(this, idColor);
+
+        } else {
+            color = getResources().getColor(idColor);
+        }
+
+        return color;
+
+    }
+
 }

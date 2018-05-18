@@ -74,23 +74,57 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
-            <ImageButton
-                android:id="@+id/imgNhanTienKhiGiaoHang"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorWhite"
-                android:scaleType="centerInside"
-                android:src="@drawable/ship" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imgChuyenKhoan"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                <ImageButton
+                    android:id="@+id/imgNhanTienKhiGiaoHang"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/colorWhite"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ship" />
+
+                <TextView
+                    android:id="@+id/txtNhanTienKhiGiaoHang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Nhận tiền khi giao hàng"
+                    android:textAlignment="center"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorWhite"
-                android:scaleType="centerInside"
-                android:src="@drawable/visa" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgChuyenKhoan"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@color/colorWhite"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/visa" />
+
+                <TextView
+                    android:id="@+id/txtChuyenKhoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Chuyển khoản"
+                    android:textAlignment="center"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <CheckBox
@@ -98,7 +132,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Tôi cam kết các thông tin trên hoàn toàn chính xác" />
+            android:text="Tôi cam kết các thông tin trên hoàn toàn chính xác"
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnThanhToan"

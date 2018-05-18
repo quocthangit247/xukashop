@@ -7,6 +7,6 @@ import com.rainbow007.xukashop.Model.ObjectClass.HoaDon;
 public interface IPresenterThanhToan {
 
     void ThemHoaDon(HoaDon hoaDon);
-    void LayDanhSachSanPhamTrongGioHang(Context context);
+    void LayDanhSachSanPhamTrongGioHang();
 
 }

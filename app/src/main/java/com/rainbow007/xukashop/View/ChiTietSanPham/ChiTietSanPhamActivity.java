@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.Presenter.ChiTietSanPham.PresenterLogicChiTietSanPham;
 import com.rainbow007.xukashop.R;
 import com.rainbow007.xukashop.View.GioHang.GioHangActivity;
+import com.rainbow007.xukashop.View.ThanhToan.ThanhToanActivity;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -31,6 +33,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
     TextView txtTenSp, txtGiaTien, txtChiTietSp, txtGioHang;
     ImageView imageView;
     ImageButton imageButton;
+    Button btnMuaNgay;
     Toolbar toolbar;
     SanPham sanPhamGioHang;
     boolean onPause = false;
@@ -46,6 +49,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
         txtChiTietSp = findViewById(R.id.txtThongTinChiTiet);
         toolbar = findViewById(R.id.toolBarDetailSP);
         imageButton = findViewById(R.id.imgThemGioHang);
+        btnMuaNgay = findViewById(R.id.btnMuaNgayCTSP);
 
         setSupportActionBar(toolbar);
 
@@ -55,6 +59,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
         presenterLogicChiTietSanPham.LayChiTietSP(String.valueOf(masp.getMasp()));
 
         imageButton.setOnClickListener(this);
+        btnMuaNgay.setOnClickListener(this);
     }
 
     @Override
@@ -109,6 +114,24 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
                 sanPhamGioHang.setHinhGioHang(hinhsanphamgiohang);
                 sanPhamGioHang.setSoluong(1);
                 presenterLogicChiTietSanPham.ThemGioHang(sanPhamGioHang, this);
+
+                break;
+
+            case R.id.btnMuaNgayCTSP:
+
+                Bitmap bitmapMuaNgay = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+
+                ByteArrayOutputStream byteArrayOutputStreamMuaNgay = new ByteArrayOutputStream();
+                bitmapMuaNgay.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStreamMuaNgay);
+
+                byte[] hinhsanphamgiohangMuaNgay = byteArrayOutputStreamMuaNgay.toByteArray();
+
+                sanPhamGioHang.setHinhGioHang(hinhsanphamgiohangMuaNgay);
+                sanPhamGioHang.setSoluong(1);
+                presenterLogicChiTietSanPham.ThemGioHang(sanPhamGioHang, this);
+
+                Intent intent = new Intent(ChiTietSanPhamActivity.this, ThanhToanActivity.class);
+                startActivity(intent);
 
                 break;
         }
