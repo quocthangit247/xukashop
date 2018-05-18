@@ -48,7 +48,7 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.bindData(sanPhams.get(position));
     }
-/*comment dong nay lai
+/*
     @Override
     public void onBindViewHolder(final AdapterSanPham.ViewHolder holder, final int position) {
 

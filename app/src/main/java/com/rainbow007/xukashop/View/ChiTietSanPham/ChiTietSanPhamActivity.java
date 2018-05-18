@@ -1,5 +1,6 @@
 package com.rainbow007.xukashop.View.ChiTietSanPham;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -51,6 +52,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
         imageButton = findViewById(R.id.imgThemGioHang);
         btnMuaNgay = findViewById(R.id.btnMuaNgayCTSP);
 
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         SanPham masp = getIntent().getParcelableExtra("masp");
@@ -95,8 +97,7 @@ public class ChiTietSanPhamActivity extends AppCompatActivity implements ViewChi
         txtGiaTien.setText(giaban + " VND");
         Picasso.get().load(sanPham.getAnhNho()).into(imageView);
         txtChiTietSp.setText(sanPham.getThongTin());
-
-
+        toolbar.setTitle(sanPham.getTenSp());
     }
 
     @Override

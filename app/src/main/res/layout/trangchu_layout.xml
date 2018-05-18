@@ -28,10 +28,10 @@
                     android:id="@+id/toolBar"
                     android:layout_width="match_parent"
                     android:layout_height="?android:attr/actionBarSize"
+                    android:layout_marginLeft="20dp"
                     app:layout_collapseMode="pin"
                     app:layout_scrollFlags="scroll|enterAlways"
                     app:logo="@drawable/logo"
-                    android:layout_marginLeft="20dp"
                     app:theme="@style/menuItem">
 
                 </android.support.v7.widget.Toolbar>
@@ -49,6 +49,7 @@
                     app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap">
 
                     <Button
+                        android:id="@+id/btnSearch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"

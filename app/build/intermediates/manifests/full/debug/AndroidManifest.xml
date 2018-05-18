@@ -52,6 +52,9 @@
         <activity
             android:name="com.rainbow007.xukashop.View.ThanhToan.ThanhToanActivity"
             android:label="Thanh Toán" />
+        <activity
+            android:name="com.rainbow007.xukashop.View.TimKiem.TimKiemActivity"
+            android:label="Tìm kiếm" />
 
         <meta-data
             android:name="android.support.VERSION"

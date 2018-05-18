@@ -1008,6 +1008,10 @@
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a6df9028819ed3c80d9e06171f70f4bc/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_timkiem.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/layout/layout_timkiem.xml"
+    },
+    {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/facebook-login-4.32.0.aar/a60b1906772110b07cd09ffd43cf7388/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
@@ -2094,6 +2098,10 @@
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_disabled.xml.flat",
         "source": "/Users/rainbow007/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/111fac204c052e3bce9fa97c8dc6ee59/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/menu_menu_timkiem.xml.flat",
+        "source": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/src/main/res/menu/menu_timkiem.xml"
     },
     {
         "merged": "/Users/rainbow007/AndroidStudioProjects/xukashop/app/build/intermediates/res/merged/debug/layout_layout_phukien.xml.flat",

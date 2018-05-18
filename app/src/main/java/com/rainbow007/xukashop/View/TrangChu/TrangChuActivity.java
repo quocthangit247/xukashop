@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,7 +29,6 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.rainbow007.xukashop.CustomAdapter.ExpandAdapter;
 import com.rainbow007.xukashop.CustomAdapter.ViewPagerAdapter;
 import com.rainbow007.xukashop.Model.DangNhap_DangKy.ModelDangNhap;
 import com.rainbow007.xukashop.Model.ObjectClass.LoaiSanPham;
@@ -37,6 +37,7 @@ import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMen
 import com.rainbow007.xukashop.R;
 import com.rainbow007.xukashop.View.DangNhap_DangKy.DangNhapActivity;
 import com.rainbow007.xukashop.View.GioHang.GioHangActivity;
+import com.rainbow007.xukashop.View.TimKiem.TimKiemActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,6 +60,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     PresenterLogicXuLyMenu logicXuLyMenu;
     String username = "";
     AccessToken accessToken;
+    Button btnSearch;
     Menu menu;
     ModelDangNhap modelDangNhap;
     MenuItem itemDangNhap, itemDangXuat;
@@ -82,6 +84,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
 //        expandableListView = findViewById(R.id.epMenu);
         appBarLayout = findViewById(R.id.appbar);
         collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
+        btnSearch = findViewById(R.id.btnSearch);
 
 
         toolbar.setTitle("");
@@ -105,6 +108,13 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         mGoogleApiClient = modelDangNhap.LayGoogleApiClient(this, this);
 
         appBarLayout.addOnOffsetChangedListener(this);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrangChuActivity.this, TimKiemActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -212,7 +222,10 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
                     this.onCreateOptionsMenu(menu);
                 }
                 break;
-
+            case R.id.icSearch:
+                Intent intent = new Intent(TrangChuActivity.this, TimKiemActivity.class);
+                startActivity(intent);
+                break;
 
         }
 
@@ -237,16 +250,30 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
         if (collapsingToolbarLayout.getHeight() + verticalOffset <= 1.5 * ViewCompat.getMinimumHeight(collapsingToolbarLayout)) {
             LinearLayout linearLayout = appBarLayout.findViewById(R.id.lnSearch);
             linearLayout.animate().alpha(0).setDuration(200);
+
+            MenuItem itemSearch = menu.findItem(R.id.icSearch);
+            itemSearch.setVisible(true);
+
         } else {
             LinearLayout linearLayout = appBarLayout.findViewById(R.id.lnSearch);
             linearLayout.animate().alpha(1).setDuration(200);
+
+            try {
+
+                MenuItem itemSearch = menu.findItem(R.id.icSearch);
+                itemSearch.setVisible(true);
+
+            } catch (Exception e) {
+
+            }
+
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (onPause){
+        if (onPause) {
             txtGioHang.setText(String.valueOf(presenterLogicChiTietSanPham.DemSanPhamTrongGioHang(this)));
         }
     }
