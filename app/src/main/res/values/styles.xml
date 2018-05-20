@@ -23,7 +23,17 @@
     </style>
 
     <declare-styleable name="PasswordEditText">
-        <attr name="useStrike" format="boolean"/>
-        <attr name="useValidate" format="boolean"/>
+        <attr name="useStrike" format="boolean" />
+        <attr name="useValidate" format="boolean" />
     </declare-styleable>
+
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:backgroundTint">@color/colorWhite</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
 </resources>

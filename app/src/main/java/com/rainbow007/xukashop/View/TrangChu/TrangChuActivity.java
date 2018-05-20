@@ -37,6 +37,7 @@ import com.rainbow007.xukashop.Presenter.TrangChu.XuLyMenu.PresenterLogicXuLyMen
 import com.rainbow007.xukashop.R;
 import com.rainbow007.xukashop.View.DangNhap_DangKy.DangNhapActivity;
 import com.rainbow007.xukashop.View.GioHang.GioHangActivity;
+import com.rainbow007.xukashop.View.ThongKe.ThongKeActivity;
 import com.rainbow007.xukashop.View.TimKiem.TimKiemActivity;
 
 import org.json.JSONException;
@@ -63,7 +64,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
     Button btnSearch;
     Menu menu;
     ModelDangNhap modelDangNhap;
-    MenuItem itemDangNhap, itemDangXuat;
+    MenuItem itemDangNhap, itemDangXuat,itemThongKe;
     GoogleApiClient mGoogleApiClient;
     GoogleSignInResult googleSignInResult;
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -141,6 +142,7 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
 
         itemDangNhap = menu.findItem(R.id.icDangnhap);
         itemDangXuat = menu.findItem(R.id.icDangXuat);
+        itemThongKe = menu.findItem(R.id.icThongKe);
 
         accessToken = logicXuLyMenu.LayTokenNguoiDungFB();
         googleSignInResult = modelDangNhap.LayThongTinDangNhapGG(mGoogleApiClient);
@@ -226,7 +228,10 @@ public class TrangChuActivity extends AppCompatActivity implements ViewXuLyMenu,
                 Intent intent = new Intent(TrangChuActivity.this, TimKiemActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.icThongKe:
+                Intent intentThongKe = new Intent(TrangChuActivity.this, ThongKeActivity.class);
+                startActivity(intentThongKe);
+                break;
         }
 
         return true;

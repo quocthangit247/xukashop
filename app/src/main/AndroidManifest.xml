@@ -47,6 +47,9 @@
         <activity
             android:name=".View.TimKiem.TimKiemActivity"
             android:label="Tìm kiếm" />
+        <activity
+            android:name=".View.ThongKe.ThongKeActivity"
+            android:label="Thống kê" />
     </application>
 
 </manifest>

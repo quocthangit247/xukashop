@@ -55,6 +55,9 @@
         <activity
             android:name="com.rainbow007.xukashop.View.TimKiem.TimKiemActivity"
             android:label="Tìm kiếm" />
+        <activity
+            android:name="com.rainbow007.xukashop.View.ThongKe.ThongKeActivity"
+            android:label="Thống kê" />
 
         <meta-data
             android:name="android.support.VERSION"
