@@ -24,6 +24,7 @@ import com.rainbow007.xukashop.R;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ThongKeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, ViewThongKe {
 
     String month;
@@ -32,6 +33,7 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
     TextView textView;
     PresenterLogicThongKe presenterLogicThongKe;
     PieChart pieChart;
+    PieData data;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,6 +59,7 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
 
 
         presenterLogicThongKe = new PresenterLogicThongKe(this);
+
 
     }
 
@@ -104,7 +107,6 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
         }
         presenterLogicThongKe.ThongKeTheoThang(month);
         Toast.makeText(this, month, Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
@@ -127,29 +129,30 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
         float tuan3 = thongKeHoaDonList.get(2).getSoluong();
         float tuan4 = thongKeHoaDonList.get(3).getSoluong();
 
+         ArrayList<String> week = new ArrayList<String>();
+
+         week.add("Tuần 1");
+         week.add("Tuần 2");
+         week.add("Tuần 3");
+         week.add("Tuần 4");
+
         ArrayList<PieEntry> values = new ArrayList<>();
-        values.add(new PieEntry(tuan1 / tong, 0));
-        values.add(new PieEntry(tuan2 / tong, 1));
-        values.add(new PieEntry(tuan3 / tong, 2));
-        values.add(new PieEntry(tuan4 / tong, 3));
+        values.add(new PieEntry(tuan1 / tong, week.get(0)));
+        values.add(new PieEntry(tuan2 / tong, week.get(1)));
+        values.add(new PieEntry(tuan3 / tong, week.get(2)));
+        values.add(new PieEntry(tuan4 / tong, week.get(3)));
 
 
-        PieDataSet dataSet = new PieDataSet(values, "So luong Hoa Don");
+        PieDataSet dataSet = new PieDataSet(values, "Hoá đơn");
 
-        ArrayList<String> week = new ArrayList<String>();
+        data = new PieData(dataSet);
 
-        week.add("Tuần 1");
-        week.add("Tuần 2");
-        week.add("Tuần 3");
-        week.add("Tuần 4");
-
-
-        PieData data = new PieData(dataSet);
         data.setValueFormatter(new PercentFormatter());
         dataSet.setColors(ColorTemplate.PASTEL_COLORS);
-        pieChart.setData(data);
         data.setValueTextSize(20f);
 
+        pieChart.setData(data);
+        pieChart.invalidate();
     }
 
     @Override
