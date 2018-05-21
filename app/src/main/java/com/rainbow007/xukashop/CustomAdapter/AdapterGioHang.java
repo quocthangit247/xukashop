@@ -128,6 +128,7 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
                 if (soluong > 1) {
                     soluong--;
                 }
+                modelGioHang.CapNhatSanPhamTrongGioHang(sanPham.getMasp(), soluong);
                 holder.txtSoLuongSp.setText(String.valueOf(soluong));
 
                 tong = gia * soluong;
