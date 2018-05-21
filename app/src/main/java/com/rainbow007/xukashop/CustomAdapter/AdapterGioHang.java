@@ -23,6 +23,10 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
     Context context;
     List<SanPham> sanPhamList;
     ModelGioHang modelGioHang;
+    int tong = 0;
+    String tiensp;
+
+    public int tongHoaDon = 0;
 
     public AdapterGioHang(Context context, List<SanPham> sanPhamList) {
         this.context = context;
@@ -32,7 +36,7 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTenSp, txtGiatien, txtSoLuongSp;
+        TextView txtTenSp, txtGiatien, txtSoLuongSp, txtTienSp;
         ImageView imgHinhSp, imgXoaGioHang;
         ImageButton imgTangSoluongSp, imgGiamSoluongSp;
 
@@ -46,6 +50,8 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
             txtSoLuongSp = itemView.findViewById(R.id.txtSoLuongSanPham);
             imgTangSoluongSp = itemView.findViewById(R.id.imgTangSoLuong);
             imgGiamSoluongSp = itemView.findViewById(R.id.imgGiamSoLuong);
+            txtTienSp = itemView.findViewById(R.id.txtTienSp);
+
         }
     }
 
@@ -66,15 +72,21 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
 
         holder.txtTenSp.setText(sanPham.getTenSp());
 
-        DecimalFormat formatter = new DecimalFormat("#,###,###");
+        final DecimalFormat formatter = new DecimalFormat("#,###,###");
         String giaban = formatter.format(sanPham.getGiaBan());
         holder.txtGiatien.setText(giaban + " VND");
+
+        tong = sanPham.getGiaBan() * sanPham.getSoluong();
+        tiensp = formatter.format(tong);
+        holder.txtTienSp.setText(tiensp + " VND");
+
 
         byte[] hinhsanpham = sanPham.getHinhGioHang();
         Bitmap HinhGioHang = BitmapFactory.decodeByteArray(hinhsanpham, 0, hinhsanpham.length);
         holder.imgHinhSp.setImageBitmap(HinhGioHang);
 
         holder.imgXoaGioHang.setTag(sanPham.getMasp());
+
         holder.imgXoaGioHang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,6 +99,9 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
             }
         });
 
+        final int gia = sanPham.getGiaBan();
+
+
         holder.txtSoLuongSp.setText(String.valueOf(sanPham.getSoluong()));
 
         holder.imgTangSoluongSp.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +112,10 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
                 soluong++;
                 modelGioHang.CapNhatSanPhamTrongGioHang(sanPham.getMasp(), soluong);
                 holder.txtSoLuongSp.setText(String.valueOf(soluong));
+
+                tong = gia * soluong;
+                tiensp = formatter.format(tong);
+                holder.txtTienSp.setText(tiensp + " VND");
 
             }
         });
@@ -110,6 +129,10 @@ public class AdapterGioHang extends RecyclerView.Adapter<AdapterGioHang.MyViewHo
                     soluong--;
                 }
                 holder.txtSoLuongSp.setText(String.valueOf(soluong));
+
+                tong = gia * soluong;
+                tiensp = formatter.format(tong);
+                holder.txtTienSp.setText(tiensp + " VND");
 
             }
         });

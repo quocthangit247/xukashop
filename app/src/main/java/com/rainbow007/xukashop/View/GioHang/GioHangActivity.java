@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.rainbow007.xukashop.CustomAdapter.AdapterGioHang;
 import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
@@ -23,6 +24,7 @@ public class GioHangActivity extends AppCompatActivity implements ViewGioHang, V
     RecyclerView recyclerView;
     PresnterLogicGioHang presnterLogicGioHang;
     Toolbar toolbar;
+    TextView txtTongTien;
     Button btnMuaNgay;
 
     @Override
@@ -33,6 +35,7 @@ public class GioHangActivity extends AppCompatActivity implements ViewGioHang, V
         recyclerView = findViewById(R.id.recyclerGioHang);
         toolbar = findViewById(R.id.toolBarGioHang);
         btnMuaNgay = findViewById(R.id.btnMuaNgay);
+        txtTongTien = findViewById(R.id.txtTienTong);
 
         setSupportActionBar(toolbar);
 
