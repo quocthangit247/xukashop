@@ -102,7 +102,7 @@ public class ModelTrangDiem {
                 sanPham.setTenSp(object.getString("TENSP"));
                 sanPham.setGiaBan(Integer.parseInt(object.getString("GIABAN")));
                 sanPham.setAnhNho(object.getString("ANHNHO"));
-
+                sanPham.setMasp(Integer.parseInt(object.getString("MASP")));
                 sanPhamList.add(sanPham);
             }
 
@@ -149,7 +149,7 @@ public class ModelTrangDiem {
                 sanPham.setTenSp(object.getString("TENSP"));
                 sanPham.setGiaBan(Integer.parseInt(object.getString("GIABAN")));
                 sanPham.setAnhNho(object.getString("ANHNHO"));
-
+                sanPham.setMasp(Integer.parseInt(object.getString("MASP")));
                 sanPhamList.add(sanPham);
             }
 
@@ -196,7 +196,7 @@ public class ModelTrangDiem {
                 sanPham.setTenSp(object.getString("TENSP"));
                 sanPham.setGiaBan(Integer.parseInt(object.getString("GIABAN")));
                 sanPham.setAnhNho(object.getString("ANHNHO"));
-
+                sanPham.setMasp(Integer.parseInt(object.getString("MASP")));
                 sanPhamList.add(sanPham);
             }
 

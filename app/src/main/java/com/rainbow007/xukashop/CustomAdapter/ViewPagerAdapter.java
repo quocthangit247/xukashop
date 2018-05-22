@@ -29,20 +29,14 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         super(fm);
 
         listFragment.add(new FragmentBestSeller());
-        listFragment.add(new FragmentTrending());
         listFragment.add(new FragmentDuongDa());
         listFragment.add(new FragmentTrangDiem());
         listFragment.add(new FragmentNuocHoa());
-        listFragment.add(new FragmentPhuKien());
-        listFragment.add(new FragmentThuongHieu());
 
         titleFragment.add("Sản phẩm mua nhiều");
-        titleFragment.add("Xu thế");
         titleFragment.add("Dưỡng da");
         titleFragment.add("Trang điểm");
         titleFragment.add("Nước hoa");
-        titleFragment.add("Phụ kiện");
-        titleFragment.add("Thương hiệu");
 
 
     }
