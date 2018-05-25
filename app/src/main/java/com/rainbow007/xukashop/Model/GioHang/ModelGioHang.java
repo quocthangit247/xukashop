@@ -39,6 +39,38 @@ public class ModelGioHang {
 
     }
 
+    public int LaySoLuong(int masp) {
+
+        int soluong = 0;
+        String truyvan = "Select " + DataSanPham.TB_GioHang_SOLUONG + " from " + DataSanPham.TB_GioHang + " where " + DataSanPham.TB_GioHang_MASP + "=" + masp;
+        Cursor cursor = database.rawQuery(truyvan, null);
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()) {
+
+            soluong = cursor.getInt(cursor.getColumnIndex(DataSanPham.TB_GioHang_SOLUONG));
+            cursor.moveToNext();
+        }
+
+        return soluong;
+    }
+
+    public int LayTong(int ma) {
+
+        int soluong = 0;
+        String truyvan = "Select " + DataSanPham.TB_Tong_Gia + " from " + DataSanPham.TB_Tong + " where " + DataSanPham.TB_Tong_Ma + "=" + ma;
+        Cursor cursor = database.rawQuery(truyvan, null);
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()) {
+
+            soluong = cursor.getInt(cursor.getColumnIndex(DataSanPham.TB_Tong_Gia));
+            cursor.moveToNext();
+        }
+
+        return soluong;
+    }
+
     public List<SanPham> LayDanhSachSanPhamTrongGioHang() {
         List<SanPham> sanPhamList = new ArrayList<>();
 
@@ -86,6 +118,20 @@ public class ModelGioHang {
         contentValues.put(DataSanPham.TB_GioHang_SOLUONG, soluong);
 
         int i = database.update(DataSanPham.TB_GioHang, contentValues, DataSanPham.TB_GioHang_MASP + "=" + masp, null);
+        if (i > 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public boolean CapNhatTong(int ma, int gia) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DataSanPham.TB_Tong_Gia, gia);
+
+        int i = database.update(DataSanPham.TB_Tong, contentValues, DataSanPham.TB_Tong_Ma + "=" + ma, null);
         if (i > 0) {
             return true;
         } else {
