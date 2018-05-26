@@ -65,7 +65,7 @@ public class AdapterNuocHoa extends RecyclerView.Adapter<AdapterNuocHoa.ViewHold
         adapterThuongHieuLon.notifyDataSetChanged();
 
         // xu ly san pham nuoc hoa
-        AdapterSanPham adapterSanPham = new AdapterSanPham(context,R.layout.custom_layout_recyclerview_sanpham,nuocHoa.getSanPhams());
+        AdapterSanPhamNuocHoa adapterSanPham = new AdapterSanPhamNuocHoa(context,R.layout.custom_layout_recyclerview_sanpham,nuocHoa.getSanPhams());
 
         RecyclerView.LayoutManager layoutManagerSanPham = new GridLayoutManager(context,3);
         holder.recyclerViewSanPham.setLayoutManager(layoutManagerSanPham);

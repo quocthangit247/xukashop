@@ -1,5 +1,6 @@
 package com.rainbow007.xukashop.View.GioHang;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,11 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.rainbow007.xukashop.CustomAdapter.AdapterGioHang;
+import com.rainbow007.xukashop.Model.GioHang.ModelGioHang;
 import com.rainbow007.xukashop.Model.ObjectClass.SanPham;
 import com.rainbow007.xukashop.Presenter.GioHang.PresnterLogicGioHang;
 import com.rainbow007.xukashop.R;
@@ -24,8 +27,9 @@ public class GioHangActivity extends AppCompatActivity implements ViewGioHang, V
     RecyclerView recyclerView;
     PresnterLogicGioHang presnterLogicGioHang;
     Toolbar toolbar;
-    TextView txtTongTien;
+    public static TextView txtTongTien;
     Button btnMuaNgay;
+    ModelGioHang modelGioHang;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,6 +48,12 @@ public class GioHangActivity extends AppCompatActivity implements ViewGioHang, V
 
         btnMuaNgay.setOnClickListener(this);
 
+
+        modelGioHang = new ModelGioHang();
+        modelGioHang.MoKetNoiSQL(getApplicationContext());
+        txtTongTien.setText(String.valueOf( modelGioHang.LayTong(1)));
+        Log.d("Activity:",String.valueOf(modelGioHang.LayTong(1)));
+       // txtTongTien.setText(String.valueOf( "0"));
     }
 
     @Override
@@ -51,7 +61,6 @@ public class GioHangActivity extends AppCompatActivity implements ViewGioHang, V
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         AdapterGioHang adapterGioHang = new AdapterGioHang(this, sanPhamList);
-
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapterGioHang);
 

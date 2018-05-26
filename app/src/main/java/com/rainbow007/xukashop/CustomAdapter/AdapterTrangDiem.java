@@ -67,21 +67,21 @@ public class AdapterTrangDiem extends RecyclerView.Adapter<AdapterTrangDiem.View
         adapterThuongHieuLon.notifyDataSetChanged();
 
         // xu ly san pham trang diem
-        AdapterSanPham adapterSanPhamMoi = new AdapterSanPham(context,R.layout.custom_layout_recyclerview_sanpham,trangDiem.getSanPhams());
+        AdapterSanPhamTrangDiem adapterSanPhamMoi = new AdapterSanPhamTrangDiem(context,R.layout.custom_layout_recyclerview_sanpham,trangDiem.getSanPhams());
 
         RecyclerView.LayoutManager layoutManagerSanPham = new GridLayoutManager(context,3);
         holder.recyclerViewSanPhamMoi.setLayoutManager(layoutManagerSanPham);
         holder.recyclerViewSanPhamMoi.setAdapter(adapterSanPhamMoi);
 
         //
-        AdapterSanPham adapterSanPhamMat = new AdapterSanPham(context,R.layout.custom_layout_recyclerview_sanpham,trangDiem.getSanPhams());
+        AdapterSanPhamTrangDiem adapterSanPhamMat = new AdapterSanPhamTrangDiem(context,R.layout.custom_layout_recyclerview_sanpham,trangDiem.getSanPhams());
 
         RecyclerView.LayoutManager layoutManagerSanPhamMat = new GridLayoutManager(context,3);
         holder.recyclerViewSanPhamMat.setLayoutManager(layoutManagerSanPhamMat);
         holder.recyclerViewSanPhamMat.setAdapter(adapterSanPhamMat);
 
         //
-        AdapterSanPham adapterSanPhamFace = new AdapterSanPham(context,R.layout.custom_layout_recyclerview_sanpham,trangDiem.getSanPhams());
+        AdapterSanPhamTrangDiem adapterSanPhamFace = new AdapterSanPhamTrangDiem(context,R.layout.custom_layout_recyclerview_sanpham,trangDiem.getSanPhams());
 
         RecyclerView.LayoutManager layoutManagerSanPhamFace = new GridLayoutManager(context,3);
         holder.recyclerViewSanPhamFace.setLayoutManager(layoutManagerSanPhamFace);
