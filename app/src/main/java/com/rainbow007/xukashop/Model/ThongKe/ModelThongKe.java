@@ -1,6 +1,7 @@
 package com.rainbow007.xukashop.Model.ThongKe;
 
 import android.util.Log;
+import android.view.Display;
 
 import com.rainbow007.xukashop.ConnectInternet.DownloadJSON;
 import com.rainbow007.xukashop.Model.ObjectClass.ChiTietHoaDon;
@@ -20,6 +21,21 @@ import java.util.concurrent.ExecutionException;
 import static com.rainbow007.xukashop.View.TrangChu.TrangChuActivity.SERVER_NAME;
 
 public class ModelThongKe {
+
+    private static ModelThongKe INSTANCE = null;
+
+    private ModelThongKe() {
+    }
+
+    ;
+
+    public static synchronized ModelThongKe getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new ModelThongKe();
+        }
+        return (INSTANCE);
+    }
+
 
     public List<ThongKeHoaDon> LayHoaDon(String month) {
 
@@ -48,7 +64,6 @@ public class ModelThongKe {
             Log.d("ModelThongke", dataJson);
             JSONArray jsonArrayDsThuongHieu = jsonObject.getJSONArray("DANHSACHHOADON");
             int dem = jsonArrayDsThuongHieu.length();
-
 
 
             for (int i = 0; i < dem; i++) {

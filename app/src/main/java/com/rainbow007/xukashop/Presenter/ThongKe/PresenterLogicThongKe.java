@@ -10,17 +10,31 @@ import java.util.List;
 public class PresenterLogicThongKe implements IPresenterThongKe {
 
     ViewThongKe viewThongKe;
-    ModelThongKe modelThongKe;
 
-    public PresenterLogicThongKe(ViewThongKe viewThongKe) {
-        this.viewThongKe = viewThongKe;
-        modelThongKe = new ModelThongKe();
+    private static PresenterLogicThongKe INSTANCE = null;
+
+    private PresenterLogicThongKe() {
     }
 
-    @Override
-    public void ThongKeTheoThang(String thang) {
+    ;
 
-        List<ThongKeHoaDon> thongKeHoaDonList = modelThongKe.LayHoaDon(thang);
+    public static synchronized PresenterLogicThongKe getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new PresenterLogicThongKe();
+
+        }
+        return (INSTANCE);
+    }
+
+
+//    public PresenterLogicThongKe(ViewThongKe viewThongKe) {
+//        this.viewThongKe = viewThongKe;
+//    }
+
+    @Override
+    public void ThongKeTheoThang(ViewThongKe viewThongKe, String thang) {
+        this.viewThongKe = viewThongKe;
+        List<ThongKeHoaDon> thongKeHoaDonList = ModelThongKe.getInstance().LayHoaDon(thang);
         if (thongKeHoaDonList.size() > 0) {
             viewThongKe.ThongKeThanhCong(thongKeHoaDonList);
         } else {

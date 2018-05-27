@@ -31,7 +31,7 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
     String months[] = {"Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"};
     AppCompatSpinner spinner;
     TextView textView;
-    PresenterLogicThongKe presenterLogicThongKe;
+    //    PresenterLogicThongKe presenterLogicThongKe;
     PieChart pieChart;
     PieData data;
 
@@ -58,7 +58,7 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
         pieChart.setUsePercentValues(true);
 
 
-        presenterLogicThongKe = new PresenterLogicThongKe(this);
+//        presenterLogicThongKe = new PresenterLogicThongKe(this);
 
 
     }
@@ -105,7 +105,7 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
                 month = "12";
                 break;
         }
-        presenterLogicThongKe.ThongKeTheoThang(month);
+        PresenterLogicThongKe.getInstance().ThongKeTheoThang(this, month);
         Toast.makeText(this, month, Toast.LENGTH_SHORT).show();
     }
 
@@ -129,12 +129,12 @@ public class ThongKeActivity extends AppCompatActivity implements AdapterView.On
         float tuan3 = thongKeHoaDonList.get(2).getSoluong();
         float tuan4 = thongKeHoaDonList.get(3).getSoluong();
 
-         ArrayList<String> week = new ArrayList<String>();
+        ArrayList<String> week = new ArrayList<String>();
 
-         week.add("Tuần 1");
-         week.add("Tuần 2");
-         week.add("Tuần 3");
-         week.add("Tuần 4");
+        week.add("Tuần 1");
+        week.add("Tuần 2");
+        week.add("Tuần 3");
+        week.add("Tuần 4");
 
         ArrayList<PieEntry> values = new ArrayList<>();
         values.add(new PieEntry(tuan1 / tong, week.get(0)));
