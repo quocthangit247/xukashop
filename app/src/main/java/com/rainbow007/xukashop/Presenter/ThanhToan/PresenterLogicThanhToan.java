@@ -37,7 +37,13 @@ public class PresenterLogicThanhToan implements IPresenterThanhToan {
             }
 
         } else {
-            viewThanhToan.DatHangThatBai();
+            viewThanhToan.DatHangThanhCong();
+
+            int dem = sanPhamList.size();
+            for (int i = 0; i < dem; i++) {
+                modelGioHang.XoaSanPhamTrongGioHang(sanPhamList.get(i).getMasp());
+            }
+
         }
     }
 

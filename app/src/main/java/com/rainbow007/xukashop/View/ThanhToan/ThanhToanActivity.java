@@ -115,7 +115,8 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void DatHangThatBai() {
-        Toast.makeText(this, "Đặt hàng thất bại !!!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ThanhToanActivity.this, TrangChuActivity.class);
+        startActivity(intent);
     }
 
     @Override
