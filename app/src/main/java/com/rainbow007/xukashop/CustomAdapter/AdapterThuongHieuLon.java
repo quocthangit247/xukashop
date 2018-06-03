@@ -69,8 +69,8 @@ public class AdapterThuongHieuLon extends RecyclerView.Adapter<AdapterThuongHieu
             public void onClick(View view) {
 
                 Intent intent = new Intent(context, HienThiSanPhamTheoDanhMucAcitivity.class);
-                intent.putExtra("MaThuongHieu",thuongHieu.getMaThuongHieu());
-                intent.putExtra("TenThuongHieu",thuongHieu.getTenThuongHieu());
+                intent.putExtra("MaThuongHieu", thuongHieu.getMaThuongHieu());
+                intent.putExtra("TenThuongHieu", thuongHieu.getTenThuongHieu());
                 context.startActivity(intent);
             }
         });

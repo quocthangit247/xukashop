@@ -64,6 +64,5 @@ public class FragmentDuongDa extends Fragment implements ViewDuongDa {
 
         adapterDuongDa.notifyDataSetChanged();
 
-
     }
 }
